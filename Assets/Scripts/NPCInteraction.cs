@@ -11,7 +11,7 @@ public class NPCInteraction : MonoBehaviour
 
     private void Start()
     {
-        
+        talkPrompt = transform.Find("TalkPrompt").gameObject;
     }
 
     private void Update()
@@ -24,11 +24,13 @@ public class NPCInteraction : MonoBehaviour
         {
             talkPrompt.SetActive(false);
         }
+
+        
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "NPC")
+        if(other.tag == "Player")
         {
             triggering = true;
             trigNpc = other.gameObject;
@@ -37,7 +39,7 @@ public class NPCInteraction : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.tag == "NPC")
+        if(other.tag == "Player")
         {
             triggering = false;
             trigNpc = null;
