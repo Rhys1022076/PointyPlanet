@@ -24,8 +24,6 @@ public class NPCInteraction : MonoBehaviour
         {
             talkPrompt.SetActive(false);
         }
-
-        
     }
 
     private void OnTriggerEnter(Collider other)
