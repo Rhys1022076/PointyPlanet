@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void OnCollisionStay(Collision collisionInfo)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        foreach (ContactPoint contact in collisionInfo.contacts)
+        {
+            //Debug-draw all contact points and normals
+            //Debug.DrawRay(contact.point, contact.normal * 10, Color.white);
+            Destroy(gameObject);
+        }
     }
 }
