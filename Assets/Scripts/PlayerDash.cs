@@ -25,10 +25,10 @@ public class PlayerDash : MonoBehaviour
     {
         isDashing = true;
         rb.AddForce(transform.forward * dashSpeed, ForceMode.Impulse);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.3f);
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
-        //yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(2f);
         isDashing = false;
     }
 }
