@@ -3,11 +3,11 @@ using UnityEngine.Events;
 
 //Attach this script to an object that has a trigger collider.
 //When another object enters the trigger collider this will call the trigger enter event 
-//When another object enters the trigger collider this will call the trigger exit event 
-// Make a copy of this script and change the tag to implement different reactions to different objects. 
+//When another object exits the trigger collider this will call the trigger exit event 
+//Make a copy of this script and change the tag to implement different reactions to different objects. 
 
 //Automatically attaches a collider to the object if it doesn't already have the necessary collider
-[RequireComponent(typeof(Collider))]
+//[RequireComponent(typeof(Collider))]
 
 public class PlayerEnterOrExitTriggerZoneEvent : MonoBehaviour
 {
@@ -22,10 +22,10 @@ public class PlayerEnterOrExitTriggerZoneEvent : MonoBehaviour
 
     // OnValidate makes an update whenever something changes in the inspector. 
     // Sets the collider component attached to the object & makes that the trigger.
-    private void OnValidate()
-    {
-        GetComponent<Collider>().isTrigger = true;   
-    }
+    //private void OnValidate()
+    //{
+    //    GetComponent<Collider>().isTrigger = true;   
+    //}
 
     private void OnTriggerEnter(Collider other)
     {

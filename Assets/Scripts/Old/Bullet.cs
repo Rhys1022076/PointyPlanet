@@ -7,15 +7,18 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 13f;
 
-    
-    // Update is called once per frame
     void Update()
     {
-      transform.position += transform.forward * Time.deltaTime * speed; 
+        transform.position += transform.forward * Time.deltaTime * speed;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.tag == "Player")
+        {
+            Destroy(collision.gameObject);
+        }
+
         Destroy(gameObject);
     }
 }

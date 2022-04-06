@@ -14,13 +14,26 @@ public class Enemy : MonoBehaviour
     private ParticleSystem explode;
 
     Patrol patrol;
+    BulletTime bulletTime;
+
+    private bool playerInRange = false;
+    public Transform player;
 
     void Start()
     {
         patrol = GetComponent<Patrol>();
+        bulletTime = GetComponent<BulletTime>();
     }
-    
-    void OnCollisionEnter(Collision other)
+
+	private void Update()
+	{
+		if (playerInRange)
+		{
+            transform.LookAt(player);
+		}
+	}
+
+	void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Player")
         {
@@ -29,9 +42,18 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    IEnumerator Explode()
+	public void OnTriggerStay(Collider other)
+	{
+        if (other.gameObject.tag == "Player")
+        {
+            playerInRange = true;
+        }
+    }
+
+	IEnumerator Explode()
     {
         patrol.StopAgent();
+        bulletTime.StopShooting();
         Destroy(model);
         Destroy(col);
         explode.Play();
