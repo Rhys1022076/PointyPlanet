@@ -22,9 +22,6 @@ public class TopDownCharacterMover : MonoBehaviour
     [SerializeField]
     private Animator animator;
 
-    [SerializeField]
-    private Rigidbody rb;
-
     Vector3 lastPos;
 
     private void Awake()
@@ -50,11 +47,11 @@ public class TopDownCharacterMover : MonoBehaviour
             RotateFromMouseVector();
         }
 
-        if(transform.position != lastPos)
+        if(_input.InputVector.x != 0f || _input.InputVector.y != 0f)
 		{
             animator.SetBool("isMoving", true);
+            lastPos = transform.position;
         }
-        lastPos = transform.position;
     }
 
     private void RotateFromMouseVector()
