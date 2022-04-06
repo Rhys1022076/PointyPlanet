@@ -3,14 +3,16 @@
     using System.Collections;
 
 
-    public class Patrol : MonoBehaviour {
+    public class Patrol : MonoBehaviour 
+    {
 
         public Transform[] points;
         private int destPoint = 0;
         private NavMeshAgent agent;
 
 
-        void Start () {
+        void Start () 
+        {
             agent = GetComponent<NavMeshAgent>();
 
             // Disabling auto-braking allows for continuous movement
@@ -22,7 +24,8 @@
         }
 
 
-        void GotoNextPoint() {
+        void GotoNextPoint() 
+        {
             // Returns if no points have been set up
             if (points.Length == 0)
                 return;
@@ -36,7 +39,8 @@
         }
 
 
-        void Update () {
+        void Update () 
+        {
             // Choose the next destination point when the agent gets
             // close to the current one.
             if (!agent.pathPending && agent.remainingDistance < 0.5f)

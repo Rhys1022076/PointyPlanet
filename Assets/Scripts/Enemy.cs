@@ -4,13 +4,26 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    void OnCollisionStay(Collision collisionInfo)
+    [SerializeField]
+    private GameObject model;
+
+    [SerializeField]
+    private ParticleSystem explode;
+    
+    void OnCollisionStay(Collision other)
     {
-        foreach (ContactPoint contact in collisionInfo.contacts)
+        if (other.gameObject.tag == "Player")
         {
-            //Debug-draw all contact points and normals
-            //Debug.DrawRay(contact.point, contact.normal * 10, Color.white);
-            Destroy(gameObject);
+            Debug.Log("boink");
+            StartCoroutine(Explode());
         }
+    }
+
+    IEnumerator Explode()
+    {
+        Destroy(model);
+        explode.Play();
+        yield return new WaitForSeconds(2);
+        Destroy(gameObject);
     }
 }

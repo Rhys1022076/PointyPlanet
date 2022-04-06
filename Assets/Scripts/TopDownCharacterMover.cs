@@ -19,9 +19,15 @@ public class TopDownCharacterMover : MonoBehaviour
     [SerializeField]
     private Camera Camera;
 
+    [SerializeField]
+    private Animator animator;
+
+    Vector3 lastPos;
+
     private void Awake()
     {
         _input = GetComponent<InputHandler>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -30,6 +36,8 @@ public class TopDownCharacterMover : MonoBehaviour
         var targetVector = new Vector3(_input.InputVector.x, 0, _input.InputVector.y);
         var movementVector = MoveTowardTarget(targetVector);
 
+        animator.SetBool("isMoving", false);
+
         if (!RotateTowardMouse)
         {
             RotateTowardMovementVector(movementVector);
@@ -37,6 +45,12 @@ public class TopDownCharacterMover : MonoBehaviour
         if (RotateTowardMouse)
         {
             RotateFromMouseVector();
+        }
+
+        if(_input.InputVector.x != 0f || _input.InputVector.y != 0f)
+		{
+            animator.SetBool("isMoving", true);
+            lastPos = transform.position;
         }
     }
 
@@ -60,7 +74,7 @@ public class TopDownCharacterMover : MonoBehaviour
 
         targetVector = Quaternion.Euler(0, Camera.gameObject.transform.rotation.eulerAngles.y, 0) * targetVector;
         var targetPosition = transform.position + targetVector * speed;
-        transform.position = targetPosition;
+        transform.position = targetPosition;        
         return targetVector;
     }
 
