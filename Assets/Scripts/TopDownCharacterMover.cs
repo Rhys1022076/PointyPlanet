@@ -22,15 +22,12 @@ public class TopDownCharacterMover : MonoBehaviour
     [SerializeField]
     private Animator animator;
 
-    Vector3 lastPos;
-
     private void Awake()
     {
         _input = GetComponent<InputHandler>();
         animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         var targetVector = new Vector3(_input.InputVector.x, 0, _input.InputVector.y);
@@ -50,7 +47,6 @@ public class TopDownCharacterMover : MonoBehaviour
         if(_input.InputVector.x != 0f || _input.InputVector.y != 0f)
 		{
             animator.SetBool("isMoving", true);
-            lastPos = transform.position;
         }
     }
 
@@ -69,8 +65,6 @@ public class TopDownCharacterMover : MonoBehaviour
     private Vector3 MoveTowardTarget(Vector3 targetVector)
     {
         var speed = MovementSpeed * Time.deltaTime;
-        //transform.Translate(targetVector * (MovementSpeed * Time.deltaTime)); Demonstrate why this doesn't work
-        //transform.Translate(targetVector * (MovementSpeed * Time.deltaTime), Camera.gameObject.transform);
 
         targetVector = Quaternion.Euler(0, Camera.gameObject.transform.rotation.eulerAngles.y, 0) * targetVector;
         var targetPosition = transform.position + targetVector * speed;

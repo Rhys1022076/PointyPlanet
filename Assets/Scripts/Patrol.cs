@@ -5,11 +5,9 @@
 
     public class Patrol : MonoBehaviour 
     {
-
         public Transform[] points;
         private int destPoint = 0;
         private NavMeshAgent agent;
-
 
         void Start () 
         {
@@ -46,4 +44,9 @@
             if (!agent.pathPending && agent.remainingDistance < 0.5f)
                 GotoNextPoint();
         }
+
+        public void StopAgent()
+        {
+            gameObject.GetComponent<NavMeshAgent>().isStopped = true;
+    }
     }

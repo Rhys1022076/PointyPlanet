@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 6942211110071140651}
+  col: {fileID: 4947217156926611905}
   explode: {fileID: 1475473235704441474}
 --- !u!136 &4947217156926611905
 CapsuleCollider:
@@ -98,10 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e24c2d99241cf304fbc047b8cfebaa40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  points: []
 --- !u!1001 &7824680995469794456
 PrefabInstance:
   m_ObjectHideFlags: 0
