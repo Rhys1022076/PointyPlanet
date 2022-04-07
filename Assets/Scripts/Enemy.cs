@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
 
     private bool playerInRange = false;
     public Transform player;
+    public float turnSpeed = 10f;
 
     void Start()
     {
@@ -29,8 +30,8 @@ public class Enemy : MonoBehaviour
 	{
 		if (playerInRange)
 		{
-            transform.LookAt(player);
-		}
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(player.position - transform.position), Time.deltaTime * turnSpeed);
+        }
 	}
 
 	void OnCollisionEnter(Collision other)
