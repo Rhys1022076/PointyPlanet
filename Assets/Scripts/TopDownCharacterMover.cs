@@ -36,6 +36,14 @@ public class TopDownCharacterMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CheckMovement();
+
+    }
+
+    void CheckMovement()
+    {
+        if (GameManager.Instance.inDialogue == true) return;
+
         var targetVector = new Vector3(_input.InputVector.x, 0, _input.InputVector.y);
         var movementVector = MoveTowardTarget(targetVector);
 
@@ -50,8 +58,8 @@ public class TopDownCharacterMover : MonoBehaviour
             RotateFromMouseVector();
         }
 
-        if(transform.position != lastPos)
-		{
+        if (transform.position != lastPos)
+        {
             animator.SetBool("isMoving", true);
         }
         lastPos = transform.position;
