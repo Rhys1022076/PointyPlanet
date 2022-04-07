@@ -17,6 +17,9 @@ public class PlayerDash : MonoBehaviour
 
     private void Update()
     {
+        // Disables dashing while in dialogue screens
+        if (GameManager.Instance.inDialogue == true) return;
+
         if (Input.GetMouseButtonDown(0) && !isDashing)
         {
             StartCoroutine(Dash());
