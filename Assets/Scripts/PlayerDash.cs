@@ -5,8 +5,10 @@ using UnityEngine;
 public class PlayerDash : MonoBehaviour
 {
     public float dashSpeed;
-    Rigidbody rb;
+    private Rigidbody rb;
     private bool isDashing = false;
+    public ParticleSystem dashTrail;
+    public ParticleSystem dashFx;
 
     private void Start()
     {
@@ -25,10 +27,22 @@ public class PlayerDash : MonoBehaviour
     {
         isDashing = true;
         rb.AddForce(transform.forward * dashSpeed, ForceMode.Impulse);
+        StartDashFX();
         yield return new WaitForSeconds(0.3f);
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
+        StopDashFX();
         yield return new WaitForSeconds(2f);
         isDashing = false;
+    }
+    void StartDashFX()
+    {
+        dashTrail.Play();
+        dashFx.Play();
+    }
+    void StopDashFX()
+    {
+        dashTrail.Stop();
+        dashFx.Stop();
     }
 }
