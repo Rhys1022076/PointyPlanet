@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerDash : MonoBehaviour
 {
     public float dashSpeed;
-    Rigidbody rb;
+    private Rigidbody rb;
     private bool isDashing = false;
     public ParticleSystem dashTrail;
     public ParticleSystem dashFx;
