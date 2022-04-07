@@ -51,10 +51,30 @@ public class Enemy : MonoBehaviour
         }
     }
 
-	IEnumerator Explode()
+    public void OnTriggerExit(Collider other)
     {
-        patrol.StopAgent();
-        bulletTime.StopShooting();
+        if (other.gameObject.tag == "Player")
+        {
+            playerInRange = false;
+        }
+    }
+
+    public IEnumerator Explode()
+    {
+        if(bulletTime != null)
+        {
+            if(bulletTime.IsInvoking("Shoot"))
+            {
+                bulletTime.StopShooting();
+            }
+        }
+       
+
+        if (patrol.destPoint != 0)
+        {
+            patrol.StopAgent();
+        }
+
         Destroy(model);
         Destroy(col);
         explode.Play();

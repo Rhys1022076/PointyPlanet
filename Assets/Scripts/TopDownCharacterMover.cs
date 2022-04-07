@@ -31,12 +31,11 @@ public class TopDownCharacterMover : MonoBehaviour
     void Update()
     {
         CheckMovement();
-
     }
 
     void CheckMovement()
     {
-        if (GameManager.Instance.inDialogue == true) return;
+        //if (GameManager.Instance.inDialogue == true) return;
 
         var targetVector = new Vector3(_input.InputVector.x, 0, _input.InputVector.y);
         var movementVector = MoveTowardTarget(targetVector);

@@ -12,13 +12,15 @@ public class BulletTime : MonoBehaviour
     // Allows referral to bullet prefab in script
     public GameObject bullet;
 
+    Vector3 bulletSpawn;
+
     public void StartShooting()
     {
        // Starts the shooting method after 1 sec delay, before continuing to shoot at shootSpeed
        if (!IsInvoking("Shoot"))
-        {
+       {
             InvokeRepeating("Shoot", 1f, shootSpeed); 
-        }
+       }
     }
 
     public void StopShooting()
@@ -29,8 +31,9 @@ public class BulletTime : MonoBehaviour
 
     private void Shoot()
     {
+        bulletSpawn = new Vector3(transform.position.x, 1.5f, transform.position.z);
+        Debug.Log("Pew");
         // Creates the bullet at the position of the robot & at the same rotation as the robot
-        Instantiate(bullet, transform.position + transform.forward * bulletSpawnDistance, transform.rotation);  
+        Instantiate(bullet, bulletSpawn + transform.forward * bulletSpawnDistance, transform.rotation);  
     }
-
 }

@@ -6,10 +6,10 @@
     public class Patrol : MonoBehaviour 
     {
         public Transform[] points;
-        private int destPoint = 0;
+        public int destPoint = 0;
         private NavMeshAgent agent;
 
-        void Start () 
+        void Awake () 
         {
             agent = GetComponent<NavMeshAgent>();
 
@@ -17,17 +17,18 @@
             // between points (ie, the agent doesn't slow down as it
             // approaches a destination point).
             agent.autoBraking = false;
-
+            
             GotoNextPoint();
         }
 
 
-        void GotoNextPoint() 
+        public void GotoNextPoint() 
         {
+            
             // Returns if no points have been set up
             if (points.Length == 0)
                 return;
-
+            agent.stoppingDistance = 0;
             // Set the agent to go to the currently selected destination.
             agent.destination = points[destPoint].position;
 
@@ -48,5 +49,5 @@
         public void StopAgent()
         {
             gameObject.GetComponent<NavMeshAgent>().isStopped = true;
-    }
+        }
     }

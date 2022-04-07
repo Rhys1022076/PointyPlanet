@@ -19,7 +19,6 @@ public class PlayerEnterOrExitTriggerZoneEvent : MonoBehaviour
     public UnityEvent<Transform> onTransformEnterEvent;
     public UnityEvent<Transform> onTransformExitEvent;
 
-
     // OnValidate makes an update whenever something changes in the inspector. 
     // Sets the collider component attached to the object & makes that the trigger.
     //private void OnValidate()
@@ -29,6 +28,7 @@ public class PlayerEnterOrExitTriggerZoneEvent : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Enter Trigger");
         if (other.tag == "Player")
         {
             triggerEnterEvent.Invoke();
@@ -38,6 +38,7 @@ public class PlayerEnterOrExitTriggerZoneEvent : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        Debug.Log("Exiting Trigger");
         if (other.tag == "Player")
         {
             triggerExitEvent.Invoke();
