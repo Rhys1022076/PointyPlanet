@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - NPC
+  - Rabbit
+  - Bullet
+  - Pickup
+  - Laser
+  - Enemy
+  - Crusher
   layers:
   - Default
   - TransparentFX
