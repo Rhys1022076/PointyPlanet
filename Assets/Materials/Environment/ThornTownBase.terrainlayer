@@ -6,9 +6,9 @@ TerrainLayer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TestTerrainLayer 2
-  m_DiffuseTexture: {fileID: 2800000, guid: c4dc3df5e4670cb4e8bfad97fe0a1387, type: 3}
-  m_NormalMapTexture: {fileID: 0}
+  m_Name: ThornTownBase
+  m_DiffuseTexture: {fileID: 2800000, guid: d19e0c0f268e8734ab499b162e5dfd5e, type: 3}
+  m_NormalMapTexture: {fileID: 2800000, guid: 9a4373a483304724496348772c825a6d, type: 3}
   m_MaskMapTexture: {fileID: 0}
   m_TileSize: {x: 100, y: 100}
   m_TileOffset: {x: 0, y: 0}
@@ -17,6 +17,6 @@ TerrainLayer:
   m_Smoothness: 0
   m_NormalScale: 1
   m_DiffuseRemapMin: {x: 0, y: 0, z: 0, w: 0}
-  m_DiffuseRemapMax: {x: 0.74163765, y: 0.3063813, z: 0.764151, w: 1}
+  m_DiffuseRemapMax: {x: 0.0473478, y: 0.5283019, z: 0.47317794, w: 1}
   m_MaskMapRemapMin: {x: 0, y: 0, z: 0, w: 0}
   m_MaskMapRemapMax: {x: 1, y: 1, z: 1, w: 1}
