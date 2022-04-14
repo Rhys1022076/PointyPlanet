@@ -6,9 +6,9 @@ TerrainLayer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ThornTownPath
-  m_DiffuseTexture: {fileID: 2800000, guid: 95917ffb8cd5e0f41ba39b8838b30106, type: 3}
-  m_NormalMapTexture: {fileID: 2800000, guid: 9a4373a483304724496348772c825a6d, type: 3}
+  m_Name: ThornTownPebbles
+  m_DiffuseTexture: {fileID: 2800000, guid: c0b23f05726607546825155b6765c44b, type: 3}
+  m_NormalMapTexture: {fileID: 2800000, guid: bf8b1d1af17c7cb408c4207ba6bc9d9e, type: 3}
   m_MaskMapTexture: {fileID: 0}
   m_TileSize: {x: 50, y: 50}
   m_TileOffset: {x: 0, y: 0}
@@ -17,6 +17,6 @@ TerrainLayer:
   m_Smoothness: 0
   m_NormalScale: 1
   m_DiffuseRemapMin: {x: 0, y: 0, z: 0, w: 0}
-  m_DiffuseRemapMax: {x: 1, y: 0.6839622, z: 0.9596842, w: 1}
+  m_DiffuseRemapMax: {x: 1, y: 0.6862745, z: 0.9607843, w: 1}
   m_MaskMapRemapMin: {x: 0, y: 0, z: 0, w: 0}
   m_MaskMapRemapMax: {x: 1, y: 1, z: 1, w: 1}

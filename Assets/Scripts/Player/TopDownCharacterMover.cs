@@ -22,10 +22,13 @@ public class TopDownCharacterMover : MonoBehaviour
     [SerializeField]
     private Animator animator;
 
+    private Rigidbody playerRB;
+
     private void Awake()
     {
         _input = GetComponent<InputHandler>();
         animator = GetComponent<Animator>();
+        playerRB = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -71,11 +74,13 @@ public class TopDownCharacterMover : MonoBehaviour
 
     private Vector3 MoveTowardTarget(Vector3 targetVector)
     {
-        var speed = MovementSpeed * Time.deltaTime;
+        //var speed = MovementSpeed * Time.deltaTime;
 
         targetVector = Quaternion.Euler(0, Camera.gameObject.transform.rotation.eulerAngles.y, 0) * targetVector;
-        var targetPosition = transform.position + targetVector * speed;
-        transform.position = targetPosition;        
+        targetVector.y = 0;
+        playerRB.velocity = targetVector * MovementSpeed;
+        //var targetPosition = transform.position + targetVector * speed;
+        //transform.position = targetPosition;        
         return targetVector;
     }
 
