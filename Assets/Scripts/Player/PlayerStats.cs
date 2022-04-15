@@ -37,6 +37,8 @@ public class PlayerStats : MonoBehaviour
     Animator anim;
     SceneHandler sceneHandler;
 
+    private bool iFrames = false;
+
 	private void Start()
 	{
         anim = GetComponent<Animator>();
@@ -59,13 +61,26 @@ public class PlayerStats : MonoBehaviour
 
     public void TakeDamage(float dmg)
     {
-        if(health != 1)
-		{
-            anim.SetTrigger("Hurt");
-		}
+        if (!iFrames)
+        {
+            Debug.Log("taking damage");
+            if (health != 1)
+            {
+                anim.SetTrigger("Hurt");
+            }
 
-        health -= dmg;
-        ClampHealth();
+            health -= dmg;
+            ClampHealth();
+            StartCoroutine(Invincible());
+        }
+    }
+
+    IEnumerator Invincible()
+    {
+        iFrames = true;
+        yield return new WaitForSeconds(1f);
+        iFrames = false;
+        Debug.Log("no iframes");
     }
 
     public void AddHealth()
@@ -105,18 +120,6 @@ public class PlayerStats : MonoBehaviour
         if (collision.gameObject.tag == "Bullet")
         {
             TakeDamage(1);
-        }
-
-        if (collision.gameObject.tag == "Pickup")
-        {
-            Debug.Log("Pickup");
-            AddHealth();
-            Destroy(collision.gameObject);
-        }
-
-        if (collision.gameObject.tag == "Crusher")
-        {
-            TakeDamage(2);
         }
     }
 }

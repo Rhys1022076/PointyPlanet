@@ -17,13 +17,14 @@ public class Enemy : MonoBehaviour
     BulletTime bulletTime;
 
     private bool playerInRange = false;
-    public Transform player;
+    private Transform player;
     public float turnSpeed = 10f;
 
     void Start()
     {
         patrol = GetComponent<Patrol>();
         bulletTime = GetComponent<BulletTime>();
+        player = GameObject.FindWithTag("Player").transform;
     }
 
 	private void Update()
@@ -34,16 +35,13 @@ public class Enemy : MonoBehaviour
         }
 	}
 
-	void OnCollisionEnter(Collision other)
+    public void Boink()
     {
-        if (other.gameObject.tag == "Player")
-        {
-            Debug.Log("boink");
-            StartCoroutine(Explode());
-        }
+        Debug.Log("boink");
+        StartCoroutine(Explode());
     }
 
-	public void OnTriggerStay(Collider other)
+    public void OnTriggerStay(Collider other)
 	{
         if (other.gameObject.tag == "Player")
         {

@@ -9,14 +9,16 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5809866924884705660}
+  - component: {fileID: 8773936682656498418}
   - component: {fileID: 5809866924884705658}
   - component: {fileID: 5809866924884705656}
   - component: {fileID: 5809866924884705607}
   - component: {fileID: 5809866924884705606}
+  - component: {fileID: 7971155968046793952}
   - component: {fileID: 5809866924884705605}
   m_Layer: 0
   m_Name: Enemy_Crusher
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,6 +39,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &8773936682656498418
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5809866924884705604}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 15
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &5809866924884705658
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -89,7 +104,7 @@ MonoBehaviour:
   col: {fileID: 5809866924884705658}
   explode: {fileID: 2904819354629155922}
   player: {fileID: 0}
-  turnSpeed: 10
+  turnSpeed: 1
 --- !u!114 &5809866924884705606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,6 +121,19 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   destPoint: 0
+--- !u!114 &7971155968046793952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5809866924884705604}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba235c0b7300bcd429b5f939c58ecb4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!114 &5809866924884705605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,7 +149,7 @@ MonoBehaviour:
   triggerEnterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5809866924884705606}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
@@ -133,7 +161,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7971155968046793952}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
@@ -148,7 +176,7 @@ MonoBehaviour:
   triggerExitEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7971155968046793952}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
@@ -160,7 +188,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5809866924884705606}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
@@ -172,7 +200,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5809866924884705606}
         m_TargetAssemblyTypeName: Patrol, Assembly-CSharp
         m_MethodName: GotoNextPoint
         m_Mode: 1
