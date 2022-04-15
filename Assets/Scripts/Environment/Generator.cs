@@ -17,13 +17,10 @@ public class Generator : MonoBehaviour
     [SerializeField]
     private ParticleSystem explode;
 
-    void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            Debug.Log("boink");
-            StartCoroutine(Delete());
-        }
+    public void DestroyGenerator()
+    {  
+        Debug.Log("boink");
+        StartCoroutine(Delete());
     }
 
     IEnumerator Delete()
