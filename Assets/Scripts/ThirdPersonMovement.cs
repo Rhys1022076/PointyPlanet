@@ -53,11 +53,19 @@ public class ThirdPersonMovement : MonoBehaviour
             playerStats.TakeDamage(2);
         }
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
         if (hit.gameObject.tag == "Generator")
 		{
             generator = hit.gameObject.GetComponent<Generator>();
             generator.DestroyGenerator();
 		}
+=======
+
+>>>>>>> Stashed changes
+=======
+
+>>>>>>> Stashed changes
     }
 
     void Update()
