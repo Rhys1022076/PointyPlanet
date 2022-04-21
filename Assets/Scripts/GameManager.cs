@@ -28,16 +28,17 @@ public class GameManager : MonoBehaviour
 
     public void EnableMovement()
     {
+        // Used to enable movement & chat
         inDialogue = false;
         //Time.timeScale = 1f;
     }
 
     public void DisableMovement()
     {
+        // Used to disable movement & chat
         inDialogue = true;
        // Time.timeScale = 0.00001f;
     }
-
 
 
 }
