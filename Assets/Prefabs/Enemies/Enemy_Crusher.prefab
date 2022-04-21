@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5809866924884705606}
   - component: {fileID: 7971155968046793952}
   - component: {fileID: 5809866924884705605}
+  - component: {fileID: 6784548576748048321}
   m_Layer: 0
   m_Name: Enemy_Crusher
   m_TagString: Enemy
@@ -217,6 +218,25 @@ MonoBehaviour:
   onTransformExitEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!95 &6784548576748048321
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5809866924884705604}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b677d16abf44f944c875e2aa050d299e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &4423285874199957851
 PrefabInstance:
   m_ObjectHideFlags: 0
