@@ -61,13 +61,5 @@ public class NPCInteraction : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (GameManager.Instance.inDialogue == false)
-        {
-            DialogueFlowChart.SetActive(false);
-        }
-    }
-
 
 }
