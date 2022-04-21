@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Prickle_Idle
+  m_Name: OP_Idle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -48,7 +48,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Spike_Model
+    path: Old Prick 1
   m_ScaleCurves:
   - curve:
       serializedVersion: 2
@@ -83,7 +83,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Spike Model
+    path: Old Prick 1
   m_FloatCurves: []
   m_PPtrCurves: []
   m_SampleRate: 1
@@ -94,14 +94,14 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 4126373859
+      path: 1162019376
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 260557047
+      path: 1162019376
       attribute: 3
       script: {fileID: 0}
       typeID: 4
@@ -163,7 +163,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Spike_Model
+    path: Old Prick 1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -200,7 +200,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Spike_Model
+    path: Old Prick 1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -237,7 +237,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Spike_Model
+    path: Old Prick 1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -274,7 +274,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.x
-    path: Spike Model
+    path: Old Prick 1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -311,7 +311,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.y
-    path: Spike Model
+    path: Old Prick 1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -348,7 +348,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.z
-    path: Spike Model
+    path: Old Prick 1
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves: []
