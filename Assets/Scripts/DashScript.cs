@@ -36,7 +36,7 @@ public class DashScript : MonoBehaviour
     {
         float startTime = Time.time;
         isDashing = true;
-
+        anim.SetTrigger("Dashing");
         StartDashFX();
         
         while (Time.time < startTime + dashTime)
