@@ -38,6 +38,7 @@ public class ThirdPersonMovement : MonoBehaviour
         if (hit.gameObject.tag == ("Rabbit") || hit.gameObject.tag == ("Enemy"))
         {
             enemyScript = hit.gameObject.GetComponent<Enemy>();
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Enemies/Explosion", GetComponent<Transform>().position);
             enemyScript.Boink();
         }
 
