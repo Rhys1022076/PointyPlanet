@@ -11,6 +11,7 @@ TagManager:
   - Laser
   - Enemy
   - Crusher
+  - Generator
   layers:
   - Default
   - TransparentFX

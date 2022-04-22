@@ -15,6 +15,7 @@ public class ThirdPersonMovement : MonoBehaviour
     private Animator anim;
     Enemy enemyScript;
     PlayerStats playerStats;
+    Generator generator;
 
     //Jump Stuff
     Vector3 velocity;
@@ -29,7 +30,7 @@ public class ThirdPersonMovement : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
-        playerStats = GetComponent < PlayerStats>();
+        playerStats = GetComponent <PlayerStats>();
     }
 
     void OnControllerColliderHit(ControllerColliderHit hit)
@@ -51,6 +52,12 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             playerStats.TakeDamage(2);
         }
+
+        if (hit.gameObject.tag == "Generator")
+		{
+            generator = hit.gameObject.GetComponent<Generator>();
+            generator.DestroyGenerator();
+		}
     }
 
     void Update()

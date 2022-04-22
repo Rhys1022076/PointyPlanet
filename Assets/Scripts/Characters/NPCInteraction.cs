@@ -7,14 +7,9 @@ public class NPCInteraction : MonoBehaviour
     private GameObject trigNpc;
     private bool triggering;
     public GameObject DialogueFlowChart;
-    public bool hasTalked;
     public GameObject talkPrompt;
 
-    private void Start()
-    {
-        //talkPrompt = transform.Find("TalkPrompt").gameObject;
-        hasTalked = false;
-    }
+  
     /*
     private void FixedUpdate()
     {
@@ -40,7 +35,6 @@ public class NPCInteraction : MonoBehaviour
             if (Input.GetMouseButtonDown(1))
             {
                 DialogueFlowChart.SetActive(true);
-                hasTalked = true;
             }
 
         }
@@ -48,14 +42,13 @@ public class NPCInteraction : MonoBehaviour
    */
     private void OnTriggerStay(Collider other)
     {
-        
-        if (hasTalked) return;
+
+        if(GameManager.Instance.inDialogue == true) return;
         triggering = true;
 
         if (other.tag == "Player" && Input.GetMouseButtonDown(1))
         {
             DialogueFlowChart.SetActive(true);
-            hasTalked = true;
         }
     }
 
@@ -67,7 +60,6 @@ public class NPCInteraction : MonoBehaviour
             trigNpc = null;
         }
     }
-
 
 
 }

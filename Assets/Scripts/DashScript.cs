@@ -6,8 +6,8 @@ public class DashScript : MonoBehaviour
 {
     ThirdPersonMovement moveScript;
 
-    private float dashSpeed = 30f;
-    private float dashTime = 0.5f;
+    private float dashSpeed = 40f;
+    private float dashTime = 0.4f;
     private bool isDashing = false;
 
     public ParticleSystem dashTrail;
