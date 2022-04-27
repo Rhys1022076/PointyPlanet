@@ -5,12 +5,6 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField]
-    private GameObject model;
-
-    [SerializeField]
-    private Collider col;
-
-    [SerializeField]
     private ParticleSystem explode;
 
     private Animator anim;
@@ -28,6 +22,15 @@ public class Enemy : MonoBehaviour
         bulletTime = GetComponent<BulletTime>();
         player = GameObject.FindWithTag("Player").transform;
         anim = GetComponent<Animator>();
+        Invoke(nameof(StartAttack), Random.Range(0, 1f));
+
+    }
+
+    private void StartAttack()
+    {
+        if (anim == null) return;
+
+        anim.SetTrigger("Start");
     }
 
     private void Update()
@@ -41,7 +44,7 @@ public class Enemy : MonoBehaviour
     public void Boink()
     {
         Debug.Log("boink");
-        StartCoroutine(Explode());
+        Destroy(gameObject);
     }
 
     public void OnTriggerStay(Collider other)
@@ -60,30 +63,9 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public IEnumerator Explode()
+    private void OnDestroy()
     {
-        if(bulletTime != null)
-        {
-            if(bulletTime.IsInvoking("Shoot"))
-            {
-                bulletTime.StopShooting();
-            }
-        }
-
-        if (patrol.destPoint != 0)
-        {
-            patrol.StopAgent();
-        }
-        
-        if (anim != null)
-		{
-            anim.SetBool("Dead", true);
-		}
-
-        Destroy(model);
-        Destroy(col);
-        explode.Play();
-        yield return new WaitForSeconds(2);
-        Destroy(gameObject);
+        var clone = Instantiate(explode, transform.position, transform.rotation);
+        Destroy(clone.gameObject, 2f);
     }
 }
