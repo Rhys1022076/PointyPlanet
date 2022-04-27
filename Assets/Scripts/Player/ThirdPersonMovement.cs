@@ -35,7 +35,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (hit.gameObject.tag == ("Rabbit") || hit.gameObject.tag == ("Enemy"))
+        if (hit.gameObject.tag == "Rabbit" || hit.gameObject.tag == "Enemy")
         {
             enemyScript = hit.gameObject.GetComponent<Enemy>();
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Enemies/Explosion", GetComponent<Transform>().position);
@@ -49,7 +49,7 @@ public class ThirdPersonMovement : MonoBehaviour
             Destroy(hit.gameObject);
         }
 
-        if (hit.gameObject.tag == "Crusher")
+        if (hit.gameObject.tag == "Crusher" || hit.gameObject.tag == "Blade")
         {
             playerStats.TakeDamage(2);
         }

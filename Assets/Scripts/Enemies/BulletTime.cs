@@ -7,12 +7,19 @@ public class BulletTime : MonoBehaviour
 {
     // Determines rate of fire
     public float shootSpeed = 0.5f;
+
     // How far the bullet spawns away from the robot, to prevent suicide
-    public float bulletSpawnDistance = 0.5f;
+    //public float bulletSpawnDistance = 0.5f;
+
     // Allows referral to bullet prefab in script
     public GameObject bullet;
 
-    Vector3 bulletSpawn;
+    // Set a position for the bullet to spawn at using an empty gameobject
+    public Transform bulletSpawn;
+    public Transform bulletSpawnLeft;
+    public Transform bulletSpawnRight;
+
+    //Vector3 bulletSpawn;
 
     public void StartShooting()
     {
@@ -31,9 +38,21 @@ public class BulletTime : MonoBehaviour
 
     private void Shoot()
     {
-        bulletSpawn = new Vector3(transform.position.x, 1.5f, transform.position.z);
         Debug.Log("Pew");
         // Creates the bullet at the position of the robot & at the same rotation as the robot
-        Instantiate(bullet, bulletSpawn + transform.forward * bulletSpawnDistance, transform.rotation);  
+
+        if (bulletSpawn != null)
+        {
+            Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);  
+        }
+        if (bulletSpawnLeft != null)
+        {
+            Instantiate(bullet, bulletSpawnLeft.position, bulletSpawnLeft.rotation);  
+        }
+        if (bulletSpawnRight != null)
+        {
+            Instantiate(bullet, bulletSpawnRight.position, bulletSpawnRight.rotation);  
+        }
+        
     }
 }

@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - Crusher
   - Generator
+  - Blade
   layers:
   - Default
   - TransparentFX
