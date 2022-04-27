@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{e13e5649-6735-48ad-8430-306710461c38}">
+		<property name="assetPath">
+			<value>Enemy Sounds/Explode [2022-04-20 124444].aif</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f7712366-7f1f-4e8d-aff2-d8de5f907fac}</destination>
+		</relationship>
+	</object>
+</objects>

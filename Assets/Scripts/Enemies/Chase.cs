@@ -6,11 +6,13 @@ using System.Collections;
 public class Chase : MonoBehaviour
 {
 
-    public Transform target; //allows target to be set in Inspector
+    private Transform target; 
     private NavMeshAgent agent;
 
     void Start()
     {
+        target = GameObject.FindWithTag("Player").transform;
+
         agent = GetComponent<NavMeshAgent>();
 
         // Disabling auto-braking allows for continuous movement

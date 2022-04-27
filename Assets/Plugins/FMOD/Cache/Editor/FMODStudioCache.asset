@@ -1,0 +1,149 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2999917442758414805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/PointyPlanetFMOD/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637866615467578686
+  FileSizes:
+  - Name: Desktop
+    Value: 878
+  Exists: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -2999917442758414805}
+  - {fileID: 3812325418770071898}
+  EditorEvents:
+  - {fileID: 9203252519542574332}
+  - {fileID: 5083749514704196161}
+  - {fileID: 2079358176982744278}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 3812325418770071898}
+  StringsBanks:
+  - {fileID: -2999917442758414805}
+  cacheTime: 637866615467578686
+  cacheVersion: 10
+--- !u!114 &2079358176982744278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Walking
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Walking
+  Guid:
+    Data1: -336101488
+    Data2: 1127918572
+    Data3: -2097984594
+    Data4: 404234681
+  Banks:
+  - {fileID: 3812325418770071898}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 369
+--- !u!114 &3812325418770071898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/PointyPlanetFMOD/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 637866615467578686
+  FileSizes:
+  - Name: Desktop
+    Value: 72192
+  Exists: 1
+--- !u!114 &5083749514704196161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/Crusher
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/Crusher
+  Guid:
+    Data1: 2134247152
+    Data2: 1243022291
+    Data3: -1096877911
+    Data4: 2088471552
+  Banks:
+  - {fileID: 3812325418770071898}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1500
+--- !u!114 &9203252519542574332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/Explosion
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/Explosion
+  Guid:
+    Data1: 46870401
+    Data2: 1263904562
+    Data3: -1836843360
+    Data4: 494343532
+  Banks:
+  - {fileID: 3812325418770071898}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000

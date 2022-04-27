@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7971155968046793952}
   - component: {fileID: 5809866924884705605}
   - component: {fileID: 6784548576748048321}
+  - component: {fileID: 2253903257729373074}
   m_Layer: 0
   m_Name: Enemy_Crusher
   m_TagString: Enemy
@@ -101,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc9aa971ac1a17840b29028c7a5ddc57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  model: {fileID: 0}
+  model: {fileID: 3576916662235704330}
   col: {fileID: 5809866924884705658}
   explode: {fileID: 2904819354629155922}
   turnSpeed: 1
@@ -117,9 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e24c2d99241cf304fbc047b8cfebaa40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points:
-  - {fileID: 0}
-  - {fileID: 0}
+  points: []
   destPoint: 0
 --- !u!114 &7971155968046793952
 MonoBehaviour:
@@ -133,7 +132,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba235c0b7300bcd429b5f939c58ecb4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!114 &5809866924884705605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,6 +235,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2253903257729373074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5809866924884705604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b23315176e8e54e9b8991df6d29ee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/SFX/Enemies/Crusher
+  PlayOnAwake: 0
+  PlayOnDestroy: 0
 --- !u!1001 &4423285874199957851
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -306,6 +319,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 217b351f718026646978190f653a8123, type: 3}
+--- !u!1 &3576916662235704330 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 217b351f718026646978190f653a8123, type: 3}
+  m_PrefabInstance: {fileID: 4423285874199957851}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4244662905356449456 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 217b351f718026646978190f653a8123, type: 3}

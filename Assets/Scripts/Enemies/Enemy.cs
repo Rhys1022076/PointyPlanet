@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private ParticleSystem explode;
 
+    private Animator anim;
+
     Patrol patrol;
     BulletTime bulletTime;
 
@@ -25,9 +27,10 @@ public class Enemy : MonoBehaviour
         patrol = GetComponent<Patrol>();
         bulletTime = GetComponent<BulletTime>();
         player = GameObject.FindWithTag("Player").transform;
+        anim = GetComponent<Animator>();
     }
 
-	private void Update()
+    private void Update()
 	{
 		if (playerInRange)
 		{
@@ -66,12 +69,16 @@ public class Enemy : MonoBehaviour
                 bulletTime.StopShooting();
             }
         }
-       
 
         if (patrol.destPoint != 0)
         {
             patrol.StopAgent();
         }
+        
+        if (anim != null)
+		{
+            anim.SetBool("Dead", true);
+		}
 
         Destroy(model);
         Destroy(col);
