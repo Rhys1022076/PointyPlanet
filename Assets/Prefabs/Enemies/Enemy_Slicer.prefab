@@ -65,8 +65,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc9aa971ac1a17840b29028c7a5ddc57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  model: {fileID: 3896502379520383975}
-  col: {fileID: 168108661388594319}
   explode: {fileID: 5599013862955277228, guid: 9069b64de27e3a947b5a154689e0c214, type: 3}
   turnSpeed: 0
 --- !u!136 &1567620958
@@ -151,16 +149,15 @@ PrefabInstance:
       value: Blades
       objectReference: {fileID: 0}
     - target: {fileID: 5233112405309087440, guid: 5457d5f157858ae4d969450e2bb362c9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5233112405309087440, guid: 5457d5f157858ae4d969450e2bb362c9, type: 3}
       propertyPath: m_TagString
       value: Blade
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5457d5f157858ae4d969450e2bb362c9, type: 3}
---- !u!1 &3896502379520383975 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5457d5f157858ae4d969450e2bb362c9, type: 3}
-  m_PrefabInstance: {fileID: 4238522307008259766}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4420556716550553949 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5457d5f157858ae4d969450e2bb362c9, type: 3}

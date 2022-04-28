@@ -23,7 +23,6 @@ public class Enemy : MonoBehaviour
         player = GameObject.FindWithTag("Player").transform;
         anim = GetComponent<Animator>();
         Invoke(nameof(StartAttack), Random.Range(0, 1f));
-
     }
 
     private void StartAttack()
