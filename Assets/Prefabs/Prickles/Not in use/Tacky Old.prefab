@@ -423,7 +423,7 @@ GameObject:
   - component: {fileID: 9078954817265210365}
   - component: {fileID: 9078954817265210364}
   m_Layer: 0
-  m_Name: Tacky
+  m_Name: Tacky Old
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

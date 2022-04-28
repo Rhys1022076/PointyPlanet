@@ -1,15 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class NPCInteraction : MonoBehaviour
 {
-    private GameObject trigNpc;
-    private bool triggering;
+    private bool triggering = false;
     public GameObject DialogueFlowChart;
     public GameObject talkPrompt;
+    public GameObject trigNPC;
 
-  
     /*
     private void FixedUpdate()
     {
@@ -23,43 +23,39 @@ public class NPCInteraction : MonoBehaviour
         }
     }
     */
-   /* private void OnTriggerEnter(Collider other)
+    
+    
+    private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        Debug.Log("Enter Trigger");
+        if (other.tag == "Player")
         {
-            
-            trigNpc = other.gameObject;
+            triggering = true;
+        }
+    }
+   
 
-            if (hasTalked) return;
+    private void OnTriggerStay(Collider other)
+        {
 
-            if (Input.GetMouseButtonDown(1))
+            if (GameManager.Instance.inDialogue == true) return;
+           
+
+            if (other.tag == "Player" && Input.GetMouseButtonDown(1))
             {
                 DialogueFlowChart.SetActive(true);
             }
-
         }
-    }
-   */
-    private void OnTriggerStay(Collider other)
-    {
-
-        if(GameManager.Instance.inDialogue == true) return;
-        triggering = true;
-
-        if (other.tag == "Player" && Input.GetMouseButtonDown(1))
-        {
-            DialogueFlowChart.SetActive(true);
-        }
-    }
 
     private void OnTriggerExit(Collider other)
-    {
-        if(other.tag == "Player")
         {
-            //triggering = false;
-            trigNpc = null;
+            Debug.Log("Exit Trigger");
+            if (other.tag == "Player")
+            {
+                triggering = false;
+            }
         }
-    }
 
 
+    
 }
