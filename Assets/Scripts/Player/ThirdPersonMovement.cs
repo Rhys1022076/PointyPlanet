@@ -16,6 +16,7 @@ public class ThirdPersonMovement : MonoBehaviour
     Enemy enemyScript;
     PlayerStats playerStats;
     Generator generator;
+    BossStats bossStats;
 
     //Jump Stuff
     Vector3 velocity;
@@ -51,7 +52,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
         if (hit.gameObject.tag == "Crusher" || hit.gameObject.tag == "Blade")
         {
-            playerStats.TakeDamage(2);
+            playerStats.TakeDamage(1);
         }
 
         if (hit.gameObject.tag == "Generator")
@@ -59,6 +60,12 @@ public class ThirdPersonMovement : MonoBehaviour
             generator = hit.gameObject.GetComponent<Generator>();
             generator.DestroyGenerator();
 		}
+
+        if (hit.gameObject.tag == "Boss")
+        {
+            bossStats = hit.gameObject.GetComponent<BossStats>();
+            bossStats.TakeDamage(1);
+        }
     }
 
     void Update()
