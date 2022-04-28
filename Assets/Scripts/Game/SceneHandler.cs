@@ -6,28 +6,61 @@ using UnityEngine.SceneManagement;
 public class SceneHandler : MonoBehaviour
 {
 	public Animator transition;
-	
-	private void Update()
+	public bool levelClear = false;
+
+	public GameObject[] enemies;
+	public GameObject[] rabbits;
+
+
+    private void Start()
+    {
+		
+	}
+
+    private void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Space))
-		{
-			NextScene();
-		}
+		//if (Input.GetKeyDown(KeyCode.Space))
+		//{
+		//	NextScene();
+		//}
 
 		if (Input.GetKeyDown(KeyCode.Escape))
 		{
 			QuitGame();
 		}
 
-		if (Input.GetKeyDown(KeyCode.Backspace))
+		//if (Input.GetKeyDown(KeyCode.Backspace))
+		//{
+		//	MenuScene();
+		//}
+
+		enemies = GameObject.FindGameObjectsWithTag("Enemy");
+		rabbits = GameObject.FindGameObjectsWithTag("Rabbit");
+		if (enemies.Length == 0 && rabbits.Length == 0)
 		{
-			MenuScene();
+			levelClear = true;
+			//Debug.Log("You killed all enemies");
 		}
 	}
 
 	public void NextScene()
 	{
-		StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        //StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        if (levelClear)
+        {
+			if (SceneManager.GetActiveScene().name == "PricklyPlains")
+            {
+				// load second thorntown scene
+				//LoadLevel(x);
+            }
+			
+			if (SceneManager.GetActiveScene().name == "PinForest")
+			{
+				// load third thorntown scene
+				//LoadLevel(x);
+			}
+
+		}
 	}
 
 	public void ReloadScene()
