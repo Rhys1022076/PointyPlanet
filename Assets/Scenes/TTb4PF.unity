@@ -1055,7 +1055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc4d9e1ec6182954d87702eaf0ab1991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueFlowChart: {fileID: 0}
+  DialogueFlowChart: {fileID: 1972775917}
   talkPrompt: {fileID: 0}
   trigNPC: {fileID: 0}
 --- !u!135 &241821073
@@ -1205,7 +1205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1656755878}
+  selectedFlowchart: {fileID: 1972775920}
 --- !u!4 &260762148
 Transform:
   m_ObjectHideFlags: 1
@@ -1296,8 +1296,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11430050, guid: 5e7fbc8d4eb714b279eeeef2262c1e1a, type: 3}
+      propertyPath: description
+      value: Pin Forests interaction
+      objectReference: {fileID: 0}
+    - target: {fileID: 11430050, guid: 5e7fbc8d4eb714b279eeeef2262c1e1a, type: 3}
       propertyPath: selectedBlocks.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11430050, guid: 5e7fbc8d4eb714b279eeeef2262c1e1a, type: 3}
       propertyPath: selectedCommands.Array.size
@@ -1452,7 +1456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
-  storyText: 'Mummy says I can''t go to the pwains to pway.
+  storyText: 'Mummy says you skewered those awiens!
 
 '
   description: 
@@ -1677,9 +1681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 26
   indentLevel: 0
-  storyText: 'She says ther ar awiens an'' its dangewous.
-
-'
+  storyText: 'But she still won''t let me go pway in the pwains. '
   description: 
   character: {fileID: 1826636133}
   portrait: {fileID: 0}
@@ -3036,6 +3038,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 976566537}
+  levelClear: 0
+  enemies: []
+  rabbits: []
 --- !u!1 &633894303 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8a33efe497dd06742bf23194ea0a8ec1, type: 3}
@@ -3373,15 +3378,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78108931fac90a94988437cff02bb304, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78108931fac90a94988437cff02bb304, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.34
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78108931fac90a94988437cff02bb304, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.39
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78108931fac90a94988437cff02bb304, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8753,7 +8758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -1051.2229, y: 298.24268}
+  scrollPos: {x: -1051.8827, y: 298.28674}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -10477,7 +10482,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 27
   indentLevel: 0
-  storyText: "Please make the fields safe again Spike. \n"
+  storyText: 'Why must they continue to destroy the peaceful land?
+
+'
   description: 
   character: {fileID: 1046674899}
   portrait: {fileID: 0}
@@ -10490,6 +10497,17 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &1972775920 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 11430050, guid: 5e7fbc8d4eb714b279eeeef2262c1e1a, type: 3}
+  m_PrefabInstance: {fileID: 2082795444}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972775917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1972775921 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 11433304, guid: 5e7fbc8d4eb714b279eeeef2262c1e1a, type: 3}
@@ -10575,7 +10593,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
-  storyText: "But nasty weird things started attacking me! \n"
+  storyText: 'I was going to go to the Pin Forest to make an offering, but there
+    were smoothies there too!
+
+'
   description: 
   character: {fileID: 1046674899}
   portrait: {fileID: 0}
@@ -10602,7 +10623,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 26
   indentLevel: 0
-  storyText: "I went to the Prickly Plains to stock up on pinapples. \n"
+  storyText: 'Thanks for clearing out the plains Spike. I was able to stock up on
+    several pin-apples. '
   description: 
   character: {fileID: 1046674899}
   portrait: {fileID: 0}
@@ -11546,8 +11568,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.2555912
-  m_Center: {x: 0, y: 0.22857696, z: 0}
+  m_Radius: 4.358829
+  m_Center: {x: 0, y: 0.22857696, z: 0.5184214}
 --- !u!4 &2092539631
 Transform:
   m_ObjectHideFlags: 0
@@ -11556,7 +11578,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092539629}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.614006, y: 117.82577, z: -126.62581}
+  m_LocalPosition: {x: 37.28, y: 117.82577, z: -126.62581}
   m_LocalScale: {x: 1.026, y: 1.026, z: 1.026}
   m_Children:
   - {fileID: 284667593}
@@ -11590,7 +11612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc4d9e1ec6182954d87702eaf0ab1991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueFlowChart: {fileID: 0}
+  DialogueFlowChart: {fileID: 284667586}
   talkPrompt: {fileID: 0}
   trigNPC: {fileID: 0}
 --- !u!1 &2097624355 stripped
