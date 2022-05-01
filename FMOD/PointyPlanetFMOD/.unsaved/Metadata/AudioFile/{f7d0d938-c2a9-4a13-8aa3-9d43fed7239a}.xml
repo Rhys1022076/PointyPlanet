@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{f7d0d938-c2a9-4a13-8aa3-9d43fed7239a}">
+		<property name="assetPath">
+			<value>Voices/Spikey_Boys_-_Penetrator.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>8.5</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f7712366-7f1f-4e8d-aff2-d8de5f907fac}</destination>
+		</relationship>
+	</object>
+</objects>
