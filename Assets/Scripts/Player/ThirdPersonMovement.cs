@@ -15,6 +15,7 @@ public class ThirdPersonMovement : MonoBehaviour
     private Animator anim;
     Enemy enemyScript;
     PlayerStats playerStats;
+    DashScript dashScript;
     Generator generator;
     BossStats bossStats;
 
@@ -32,6 +33,7 @@ public class ThirdPersonMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         playerStats = GetComponent <PlayerStats>();
+        dashScript = GetComponent <DashScript>();
     }
 
     void OnControllerColliderHit(ControllerColliderHit hit)
@@ -39,7 +41,7 @@ public class ThirdPersonMovement : MonoBehaviour
         if (hit.gameObject.tag == "Rabbit" || hit.gameObject.tag == "Enemy")
         {
             enemyScript = hit.gameObject.GetComponent<Enemy>();
-            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Enemies/Explosion", GetComponent<Transform>().position);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Enemies/Explosion", gameObject.GetComponent<Transform>().position);
             enemyScript.Boink();
         }
 
@@ -72,6 +74,13 @@ public class ThirdPersonMovement : MonoBehaviour
     {
         if (GameManager.Instance.inDialogue == true)
         {
+            anim.SetBool("isMoving", false);
+            return;
+        }
+
+		if (dashScript.isDashing)
+		{
+            RotateFromMouseVector();
             anim.SetBool("isMoving", false);
             return;
         }

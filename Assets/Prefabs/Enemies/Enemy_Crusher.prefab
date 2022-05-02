@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7971155968046793952}
   - component: {fileID: 5809866924884705605}
   - component: {fileID: 6784548576748048321}
-  - component: {fileID: 2253903257729373074}
+  - component: {fileID: 4724847705838804977}
   m_Layer: 0
   m_Name: Enemy_Crusher
   m_TagString: Enemy
@@ -101,8 +101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc9aa971ac1a17840b29028c7a5ddc57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  model: {fileID: 3576916662235704330}
-  col: {fileID: 5809866924884705658}
   explode: {fileID: 5599013862955277228, guid: 9069b64de27e3a947b5a154689e0c214, type: 3}
   turnSpeed: 1
 --- !u!114 &5809866924884705606
@@ -234,7 +232,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2253903257729373074
+--- !u!114 &4724847705838804977
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -246,7 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b23315176e8e54e9b8991df6d29ee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: event:/SFX/Enemies/Crusher
+  Event: 
   PlayOnAwake: 0
   PlayOnDestroy: 0
 --- !u!1001 &4423285874199957851
@@ -318,11 +316,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 217b351f718026646978190f653a8123, type: 3}
---- !u!1 &3576916662235704330 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 217b351f718026646978190f653a8123, type: 3}
-  m_PrefabInstance: {fileID: 4423285874199957851}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4244662905356449456 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 217b351f718026646978190f653a8123, type: 3}

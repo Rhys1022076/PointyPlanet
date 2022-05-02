@@ -39,7 +39,7 @@ MonoBehaviour:
   Path: FMOD/PointyPlanetFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637866622801009583
+  lastModified: 637871281151224821
   FileSizes:
   - Name: Desktop
     Value: 1566
@@ -134,7 +134,7 @@ MonoBehaviour:
   - {fileID: 3812325418770071898}
   StringsBanks:
   - {fileID: -2999917442758414805}
-  cacheTime: 637866622801049483
+  cacheTime: 637871281151224821
   cacheVersion: 10
 --- !u!114 &284769911641777834
 MonoBehaviour:
@@ -240,7 +240,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 500
+  Length: 305
 --- !u!114 &1649066196439587599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,7 +267,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2000
+  Length: 300
 --- !u!114 &2005423448554245472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,11 +317,11 @@ MonoBehaviour:
   - {fileID: 3812325418770071898}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 215
+  Length: 250
 --- !u!114 &3040145939407943707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,7 +375,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 500
+  Length: 220
 --- !u!114 &3812325418770071898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,10 +391,10 @@ MonoBehaviour:
   Path: FMOD/PointyPlanetFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637866622801049483
+  lastModified: 637871281151174812
   FileSizes:
   - Name: Desktop
-    Value: 5567552
+    Value: 5140992
   Exists: 1
 --- !u!114 &4138012651219986571
 MonoBehaviour:
@@ -505,7 +505,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 520
+  Length: 600
 --- !u!114 &9203252519542574332
 MonoBehaviour:
   m_ObjectHideFlags: 0

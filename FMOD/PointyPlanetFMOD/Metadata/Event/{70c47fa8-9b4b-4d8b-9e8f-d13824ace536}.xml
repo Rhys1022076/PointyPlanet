@@ -101,6 +101,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{44ad085f-7c63-42c9-96a2-7602f7dec60a}">
+		<property name="volume">
+			<value>-5</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -126,16 +129,13 @@
 		<property name="nameOfPropertyBeingModulated">
 			<value>volume</value>
 		</property>
-		<property name="amount">
-			<value>37</value>
-		</property>
 	</object>
 	<object class="RandomizerModulator" id="{ed69e53b-c0da-4479-818b-6f7a68ef8a54}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>pitch</value>
 		</property>
 		<property name="amount">
-			<value>37.5</value>
+			<value>10</value>
 		</property>
 	</object>
 	<object class="MixerBusEffectChain" id="{0b32be96-25a3-4c9e-a09f-c428fe52f37d}">
@@ -145,6 +145,19 @@
 	</object>
 	<object class="MixerBusPanner" id="{340449ce-5ba3-4d98-b6bb-0aea42318f0b}" />
 	<object class="MixerBusFader" id="{d16b486a-ac4e-443f-bc04-b94955b98d76}" />
-	<object class="SpatialiserEffect" id="{d8793f07-a1e7-4cda-ab75-6d03578cee5f}" />
+	<object class="SpatialiserEffect" id="{d8793f07-a1e7-4cda-ab75-6d03578cee5f}">
+		<property name="maximumDistance">
+			<value>50</value>
+		</property>
+		<property name="overrideRange">
+			<value>true</value>
+		</property>
+		<property name="extentMode">
+			<value>1</value>
+		</property>
+		<property name="soundSize">
+			<value>2</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{80025d6f-afa6-40aa-8ad2-f3a0581c4039}" />
 </objects>
