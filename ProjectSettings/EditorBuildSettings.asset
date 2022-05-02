@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: beea4650532ba704ba9e31535c1a2286
+  - enabled: 1
+    path: Assets/Scenes/TTb4PP.unity
+    guid: c7e859997fb759c438eab87deac8aa7e
+  - enabled: 1
+    path: Assets/Scenes/PricklyPlains.unity
+    guid: af171cd5c6fb8ae43be4abe9ed896975
+  - enabled: 1
+    path: Assets/Scenes/TTb4PF.unity
+    guid: 9f044cccfa240aa4c85434f3916b3253
+  - enabled: 1
     path: Assets/Scenes/PinForest.unity
     guid: 13aff50534c8d014c9ae445bd3c31385
   m_configObjects:

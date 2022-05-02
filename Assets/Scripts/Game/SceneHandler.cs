@@ -8,16 +8,13 @@ public class SceneHandler : MonoBehaviour
 	public Animator transition;
 	public bool levelClear = false;
 
+	public GameObject plainsTrigger;
+	public GameObject forestTrigger;
+	
 	public GameObject[] enemies;
 	public GameObject[] rabbits;
 
-
-    private void Start()
-    {
-		
-	}
-
-    private void Update()
+	private void Update()
 	{
 		//if (Input.GetKeyDown(KeyCode.Space))
 		//{
@@ -51,15 +48,33 @@ public class SceneHandler : MonoBehaviour
 			if (SceneManager.GetActiveScene().name == "PricklyPlains")
             {
 				// load second thorntown scene
-				//LoadLevel(x);
+				LoadLevel(3);
             }
 			
 			if (SceneManager.GetActiveScene().name == "PinForest")
 			{
-				// load third thorntown scene
+				// load thorntown finale scene
 				//LoadLevel(x);
 			}
 
+		}
+
+		if (SceneManager.GetActiveScene().name == "Menu")
+		{
+			// load Thorntown intro
+			StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+		}
+
+		if (SceneManager.GetActiveScene().name == "TTb4PP")
+		{
+			// load Prickly Plains
+			StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+		}
+
+		if (SceneManager.GetActiveScene().name == "TTb4PF")
+		{
+			// load Pin Forest
+			StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
 		}
 	}
 
