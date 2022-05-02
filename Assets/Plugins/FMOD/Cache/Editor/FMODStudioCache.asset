@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: FMOD/PointyPlanetFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637866622801009583
+  lastModified: 637870908606539954
   FileSizes:
   - Name: Desktop
     Value: 878
@@ -44,7 +44,7 @@ MonoBehaviour:
   - {fileID: 3812325418770071898}
   StringsBanks:
   - {fileID: -2999917442758414805}
-  cacheTime: 637866622801049483
+  cacheTime: 637870908606539954
   cacheVersion: 10
 --- !u!114 &2079358176982744278
 MonoBehaviour:
@@ -88,7 +88,7 @@ MonoBehaviour:
   Path: FMOD/PointyPlanetFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637866622801049483
+  lastModified: 637870908606539954
   FileSizes:
   - Name: Desktop
     Value: 72192

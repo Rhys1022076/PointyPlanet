@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1219,6 +1219,64 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &268251751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 268251754}
+  - component: {fileID: 268251753}
+  - component: {fileID: 268251752}
+  m_Layer: 0
+  m_Name: ForestTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &268251752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268251751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e6e4444aff5d4a48add15fdca8fb02c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneHandler: {fileID: 1847142061}
+--- !u!65 &268251753
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268251751}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 30}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &268251754
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268251751}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -101, y: 0, z: -38.9}
+  m_LocalScale: {x: 1.1851543, y: 2.3838232, z: 2.5517}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &284667583
 PrefabInstance:
@@ -2898,12 +2956,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ce1476b49386c9c4c8f0ff8dbfcdc90f, type: 3}
   - {fileID: 21300000, guid: ffb52e85015148845bc576989b8fb447, type: 3}
   - {fileID: 21300000, guid: e39fd69c880b11044a2c54971e48deda, type: 3}
-  - {fileID: 21300000, guid: ef559c9520af8c14286de2af0bee854f, type: 3}
   - {fileID: 21300000, guid: 0794dab67fb7dbc40ac89c93c8490e50, type: 3}
   - {fileID: 21300000, guid: 44284d3c05d11224ebd7166375d1cff0, type: 3}
   - {fileID: 21300000, guid: 44456cc8cb05c5d45ae5478753a18bac, type: 3}
   - {fileID: 21300000, guid: 01caf6157d56e9d4ab9e9a79697175ef, type: 3}
   - {fileID: 21300000, guid: f8d0ac697d5bfce4ea25a91004e6bdff, type: 3}
+  - {fileID: 21300000, guid: ef559c9520af8c14286de2af0bee854f, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
@@ -3039,6 +3097,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 976566537}
   levelClear: 0
+  plainsTrigger: {fileID: 0}
+  forestTrigger: {fileID: 0}
   enemies: []
   rabbits: []
 --- !u!1 &633894303 stripped
@@ -10190,6 +10250,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22066a594dcfec746a7c82aed13d850a, type: 3}
+--- !u!114 &1847142061 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8105527825806797129, guid: 22066a594dcfec746a7c82aed13d850a, type: 3}
+  m_PrefabInstance: {fileID: 1847142060}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78a2ce2ad8b89b246a6225385935d814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1858466464 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8a33efe497dd06742bf23194ea0a8ec1, type: 3}
