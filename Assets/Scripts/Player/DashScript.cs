@@ -28,6 +28,7 @@ public class DashScript : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && !isDashing)
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Player/Dash", GetComponent<Transform>().position);
             StartCoroutine(Dash());
         }
     }

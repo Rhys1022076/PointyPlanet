@@ -2095,10 +2095,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD_Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 1413387144212306689, guid: d39030e8b07216141a9db711de1182c1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1413387144212306693, guid: d39030e8b07216141a9db711de1182c1, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2187,8 +2183,25 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1080151038}
+    - target: {fileID: 2035118099333048587, guid: d39030e8b07216141a9db711de1182c1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1953800585}
+    - target: {fileID: 7569698218122460821, guid: d39030e8b07216141a9db711de1182c1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1953800585}
+    - target: {fileID: 7701493734075087695, guid: d39030e8b07216141a9db711de1182c1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1953800585}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d39030e8b07216141a9db711de1182c1, type: 3}
+--- !u!1 &419785337 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4951722549383251949, guid: d39030e8b07216141a9db711de1182c1, type: 3}
+  m_PrefabInstance: {fileID: 419785336}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &443814123
 GameObject:
   m_ObjectHideFlags: 0
@@ -2850,6 +2863,7 @@ MonoBehaviour:
   levelClear: 0
   plainsTrigger: {fileID: 0}
   forestTrigger: {fileID: 0}
+  pauseMenu: {fileID: 0}
   enemies: []
   rabbits: []
 --- !u!1 &633894303 stripped
@@ -4081,6 +4095,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 850792021676266279, guid: 31ba85ae864805544b2dd564c0317e92, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1661194679784107916, guid: 31ba85ae864805544b2dd564c0317e92, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9408,6 +9426,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 8105527825806797129, guid: 22066a594dcfec746a7c82aed13d850a, type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 419785337}
     - target: {fileID: 8105527825806797129, guid: 22066a594dcfec746a7c82aed13d850a, type: 3}
       propertyPath: plainsTrigger
       value: 
