@@ -70,7 +70,11 @@ public class ThirdPersonMovement : MonoBehaviour
 
     void Update()
     {
-        if (GameManager.Instance.inDialogue == true) return;
+        if (GameManager.Instance.inDialogue == true)
+        {
+            anim.SetBool("isMoving", false);
+            return;
+        }
 
         anim.SetBool("isMoving", false);
 

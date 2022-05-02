@@ -10,6 +10,8 @@ public class SceneHandler : MonoBehaviour
 
 	public GameObject plainsTrigger;
 	public GameObject forestTrigger;
+
+	public GameObject pauseMenu;
 	
 	public GameObject[] enemies;
 	public GameObject[] rabbits;
@@ -21,9 +23,13 @@ public class SceneHandler : MonoBehaviour
 		//	NextScene();
 		//}
 
+		if (GameManager.Instance.inDialogue == true) return;
+
 		if (Input.GetKeyDown(KeyCode.Escape))
 		{
-			QuitGame();
+			pauseMenu.SetActive(true);
+			GameManager.Instance.inDialogue = true;
+			Time.timeScale = 0;
 		}
 
 		//if (Input.GetKeyDown(KeyCode.Backspace))
@@ -31,13 +37,17 @@ public class SceneHandler : MonoBehaviour
 		//	MenuScene();
 		//}
 
-		enemies = GameObject.FindGameObjectsWithTag("Enemy");
-		rabbits = GameObject.FindGameObjectsWithTag("Rabbit");
-		if (enemies.Length == 0 && rabbits.Length == 0)
+		if(SceneManager.GetActiveScene().name == "PricklyPlains" || SceneManager.GetActiveScene().name == "PinForest")
 		{
-			levelClear = true;
-			//Debug.Log("You killed all enemies");
-		}
+			enemies = GameObject.FindGameObjectsWithTag("Enemy");
+			rabbits = GameObject.FindGameObjectsWithTag("Rabbit");
+			if (enemies.Length == 0 && rabbits.Length == 0)
+			{
+				levelClear = true;
+				NextScene();
+				//Debug.Log("You killed all enemies");
+			}
+		}	
 	}
 
 	public void NextScene()
@@ -78,6 +88,13 @@ public class SceneHandler : MonoBehaviour
 		}
 	}
 
+	public void ResumeGame()
+	{
+		pauseMenu.SetActive(false);
+		GameManager.Instance.inDialogue = false;
+		Time.timeScale = 1;
+	}
+
 	public void ReloadScene()
 	{
 		StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex));
@@ -85,10 +102,11 @@ public class SceneHandler : MonoBehaviour
 
 	public void MenuScene()
 	{
+		Time.timeScale = 1;
 		StartCoroutine(LoadLevel(0));
 	}
 
-	void QuitGame()
+	public void QuitGame()
 	{
 		Application.Quit();
 	}
