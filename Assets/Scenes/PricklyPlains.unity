@@ -7576,7 +7576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: Tacky
-  nameColor: {r: 0.8396226, g: 0.77416193, b: 0.2745935, a: 1}
+  nameColor: {r: 0.5943396, g: 0.5476732, b: 0.19904771, a: 1}
   soundEffect: {fileID: 0}
   portraits:
   - {fileID: 21300000, guid: d3a0b939a6eaa974fa6a413bf8de72e2, type: 3}
