@@ -9,6 +9,9 @@ public class MusicScript : MonoBehaviour
 
     Scene scene;
 
+    private GameObject boss;
+    Boss bossScript;
+
     void Start()
     {
         DontDestroyOnLoad(gameObject);
@@ -45,7 +48,14 @@ public class MusicScript : MonoBehaviour
 
         if (scene.name == "PinForest")
         {
+            boss = GameObject.FindGameObjectWithTag("Boss");
+            bossScript = boss.GetComponent<Boss>();
             ProgressMusic(2.5f);
+
+			if (bossScript.bossMusic)
+			{
+                ProgressMusic(3.5f);
+			}
         }
     }
 }

@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 3462688794109722392}
   - component: {fileID: 4200309154691312109}
   - component: {fileID: 1511527150425181713}
+  - component: {fileID: 854695274218599486}
   m_Layer: 0
   m_Name: Enemy_Boss
   m_TagString: Boss
@@ -100,6 +101,7 @@ MonoBehaviour:
   explode: {fileID: 5599013862955277228, guid: 9069b64de27e3a947b5a154689e0c214, type: 3}
   player: {fileID: 0}
   turnSpeed: 1
+  bossMusic: 0
 --- !u!114 &3827060272563016731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,6 +214,21 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 40
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &854695274218599486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5127680145090718258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b23315176e8e54e9b8991df6d29ee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: 
+  PlayOnAwake: 0
+  PlayOnDestroy: 0
 --- !u!1 &7646496823224528881
 GameObject:
   m_ObjectHideFlags: 0

@@ -48,7 +48,8 @@ public class ThirdPersonMovement : MonoBehaviour
         if (hit.gameObject.tag == "Pickup")
         {
             Debug.Log("Pickup");
-            playerStats.AddHealth();
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Player/Heal", gameObject.GetComponent<Transform>().position);
+            playerStats.Heal(1);
             Destroy(hit.gameObject);
         }
 
