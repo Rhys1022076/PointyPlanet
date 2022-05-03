@@ -8,7 +8,8 @@ public class DashScript : MonoBehaviour
 
     private float dashSpeed = 40f;
     private float dashTime = 0.4f;
-    private bool isDashing = false;
+    public bool isDashing = false;
+    private bool dashCharge = false;
 
     public ParticleSystem dashTrail;
     public ParticleSystem dashFx;
@@ -26,9 +27,9 @@ public class DashScript : MonoBehaviour
         // Disables dashing while in dialogue screens
         if (GameManager.Instance.inDialogue == true) return;
 
-        if (Input.GetMouseButtonDown(0) && !isDashing)
+        if (Input.GetMouseButtonDown(0) && !dashCharge)
         {
-            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Player/Dash", GetComponent<Transform>().position);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Player/Dash", gameObject.GetComponent<Transform>().position);
             StartCoroutine(Dash());
         }
     }
@@ -37,6 +38,7 @@ public class DashScript : MonoBehaviour
     {
         float startTime = Time.time;
         isDashing = true;
+        dashCharge = true;
         anim.SetTrigger("Dashing");
         StartDashFX();
         
@@ -46,12 +48,13 @@ public class DashScript : MonoBehaviour
 
             yield return null;
         }
-        
+
+        isDashing = false;
         anim.SetTrigger("Dashed");
         StopDashFX();
 
         yield return new WaitForSeconds(2f);
-        isDashing = false;
+        dashCharge = false;
 
         Debug.Log("Dash Charged");
     }

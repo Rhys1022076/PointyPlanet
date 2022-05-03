@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="ParameterPreset" id="{7c7808af-a22f-4fa8-a021-c7062cd5b4a1}">
 		<property name="name">
-			<value>Location Changes</value>
+			<value>Location</value>
 		</property>
 		<relationship name="folder">
 			<destination>{41e9b148-8c9c-46a5-8e9f-1f80b4900f08}</destination>
@@ -16,7 +16,10 @@
 			<value>5</value>
 		</property>
 		<property name="initialValue">
-			<value>0</value>
+			<value>4.5</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
 		</property>
 	</object>
 </objects>

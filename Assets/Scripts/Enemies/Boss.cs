@@ -64,6 +64,7 @@ public class Boss : MonoBehaviour
 
     private void OnDestroy()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Enemies/Explosion", GetComponent<Transform>().position);
         var clone = Instantiate(explode, transform.position, transform.rotation);
         Destroy(clone.gameObject, 2f);
     }

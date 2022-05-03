@@ -27,9 +27,10 @@ public class Generator : MonoBehaviour
     {
         Destroy(bCollider);
         Destroy(generator);
-        explode.Play();
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Enemies/Explosion", GetComponent<Transform>().position);
+        var clone = Instantiate(explode, transform.position, transform.rotation);
+        Destroy(clone.gameObject, 2f);
         yield return new WaitForSeconds(2);
-
     }
 
     private void Update()

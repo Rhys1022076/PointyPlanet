@@ -43,14 +43,17 @@ public class BulletTime : MonoBehaviour
 
         if (bulletSpawn != null)
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Enemies/Laser", gameObject.GetComponent<Transform>().position);
             Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);  
         }
         if (bulletSpawnLeft != null)
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Enemies/Laser", gameObject.GetComponent<Transform>().position);
             Instantiate(bullet, bulletSpawnLeft.position, bulletSpawnLeft.rotation);  
         }
         if (bulletSpawnRight != null)
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Enemies/Laser", gameObject.GetComponent<Transform>().position);
             Instantiate(bullet, bulletSpawnRight.position, bulletSpawnRight.rotation);  
         }
         

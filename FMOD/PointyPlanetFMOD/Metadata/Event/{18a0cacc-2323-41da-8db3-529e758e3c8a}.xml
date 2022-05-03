@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{18a0cacc-2323-41da-8db3-529e758e3c8a}">
 		<property name="name">
-			<value>Death</value>
+			<value>Hurt</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
@@ -92,11 +92,17 @@
 		<property name="length">
 			<value>0.52000000000000002</value>
 		</property>
+		<property name="pitch">
+			<value>5</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{d402b2ec-d4e5-4557-9232-f683936838c5}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{83d8be6a-e081-41d2-ba2c-adb6b469e42f}">
+		<property name="volume">
+			<value>-19.5</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>

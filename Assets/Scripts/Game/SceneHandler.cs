@@ -45,7 +45,7 @@ public class SceneHandler : MonoBehaviour
 			{
 				levelClear = true;
 				NextScene();
-				//Debug.Log("You killed all enemies");
+				Debug.Log("You killed all enemies");
 			}
 		}	
 	}
@@ -58,7 +58,7 @@ public class SceneHandler : MonoBehaviour
 			if (SceneManager.GetActiveScene().name == "PricklyPlains")
             {
 				// load second thorntown scene
-				LoadLevel(3);
+				StartCoroutine(LoadLevel(3));
             }
 			
 			if (SceneManager.GetActiveScene().name == "PinForest")

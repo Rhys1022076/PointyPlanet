@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5294560062074607547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI/Click
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI/Click
+  Guid:
+    Data1: 655900390
+    Data2: 1125747334
+    Data3: -1217757805
+    Data4: 399970958
+  Banks:
+  - {fileID: 3812325418770071898}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 111
 --- !u!114 &-3577678697974395417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39,10 +66,10 @@ MonoBehaviour:
   Path: FMOD/PointyPlanetFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637871099352124624
+  lastModified: 637871925184535103
   FileSizes:
   - Name: Desktop
-    Value: 1566
+    Value: 1592
   Exists: 1
 --- !u!114 &-2525266076685932896
 MonoBehaviour:
@@ -118,7 +145,6 @@ MonoBehaviour:
   - {fileID: 5083749514704196161}
   - {fileID: 2079358176982744278}
   - {fileID: 7198065082367820708}
-  - {fileID: 3040145939407943707}
   - {fileID: 931854378989208911}
   - {fileID: -489539497928759962}
   - {fileID: -2525266076685932896}
@@ -129,12 +155,14 @@ MonoBehaviour:
   - {fileID: 4138012651219986571}
   - {fileID: 2005423448554245472}
   - {fileID: 340859730987852156}
+  - {fileID: -5294560062074607547}
+  - {fileID: 8279784837572499776}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3812325418770071898}
   StringsBanks:
   - {fileID: -2999917442758414805}
-  cacheTime: 637871099352667601
+  cacheTime: 637871925184535103
   cacheVersion: 10
 --- !u!114 &284769911641777834
 MonoBehaviour:
@@ -146,13 +174,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Soundtrack/Location Changes
+  m_Name: parameter:/Soundtrack/Location
   m_EditorClassIdentifier: 
-  Name: Location Changes
+  Name: Location
   StudioPath: 
   Min: 0
   Max: 5
-  Default: 0
+  Default: 4.5
   ID:
     data1: 3879659865
     data2: 1438735432
@@ -182,7 +210,7 @@ MonoBehaviour:
   - {fileID: 3812325418770071898}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -240,7 +268,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 500
+  Length: 305
 --- !u!114 &1649066196439587599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,7 +295,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2000
+  Length: 300
 --- !u!114 &2005423448554245472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,38 +345,11 @@ MonoBehaviour:
   - {fileID: 3812325418770071898}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 215
---- !u!114 &3040145939407943707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Player/Game Over
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Player/Game Over
-  Guid:
-    Data1: -81591436
-    Data2: 1188276685
-    Data3: 1677651882
-    Data4: 902585891
-  Banks:
-  - {fileID: 3812325418770071898}
-  IsStream: 0
-  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2000
+  Length: 250
 --- !u!114 &3111860200813532627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,7 +376,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 500
+  Length: 220
 --- !u!114 &3812325418770071898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,10 +392,10 @@ MonoBehaviour:
   Path: FMOD/PointyPlanetFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637871099352667601
+  lastModified: 637871925184495091
   FileSizes:
   - Name: Desktop
-    Value: 5567552
+    Value: 5144416
   Exists: 1
 --- !u!114 &4138012651219986571
 MonoBehaviour:
@@ -410,10 +411,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/Player/Death
   Guid:
-    Data1: 413190860
-    Data2: 1104814883
-    Data3: -1638747251
-    Data4: -1975742859
+    Data1: -81591436
+    Data2: 1188276685
+    Data3: 1677651882
+    Data4: 902585891
   Banks:
   - {fileID: 3812325418770071898}
   IsStream: 0
@@ -422,7 +423,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 520
+  Length: 1600
 --- !u!114 &5083749514704196161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,6 +498,33 @@ MonoBehaviour:
     Data2: 1074368232
     Data3: -111102021
     Data4: -1364939731
+  Banks:
+  - {fileID: 3812325418770071898}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 600
+--- !u!114 &8279784837572499776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Hurt
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Hurt
+  Guid:
+    Data1: 413190860
+    Data2: 1104814883
+    Data3: -1638747251
+    Data4: -1975742859
   Banks:
   - {fileID: 3812325418770071898}
   IsStream: 0
