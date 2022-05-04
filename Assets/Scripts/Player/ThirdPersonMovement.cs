@@ -55,19 +55,29 @@ public class ThirdPersonMovement : MonoBehaviour
 
         if (hit.gameObject.tag == "Crusher" || hit.gameObject.tag == "Blade")
         {
+            Debug.Log(hit.gameObject);
             playerStats.TakeDamage(1);
         }
 
         if (hit.gameObject.tag == "Generator")
-		{
+        {
             generator = hit.gameObject.GetComponent<Generator>();
             generator.DestroyGenerator();
-		}
+        }
 
         if (hit.gameObject.tag == "Boss")
         {
             bossStats = hit.gameObject.GetComponent<BossStats>();
             bossStats.TakeDamage(1);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("BossBlade"))
+        {
+            Debug.Log(other);
+            playerStats.TakeDamage(1);
         }
     }
 

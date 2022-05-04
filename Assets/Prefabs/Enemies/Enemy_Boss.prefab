@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eddee1d3110fb0a409616a6c0e7df3c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explode: {fileID: 5599013862955277228, guid: 9069b64de27e3a947b5a154689e0c214, type: 3}
+  explode: {fileID: 2312591318274358132, guid: 77da29788f3010e4396994ea52057980, type: 3}
   player: {fileID: 0}
   turnSpeed: 1
   bossMusic: 0
@@ -114,9 +114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33288d33510ef3845a56916bd932e743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
-  maxHealth: 3
-  maxTotalHealth: 3
+  health: 4
+  maxHealth: 4
+  maxTotalHealth: 4
 --- !u!114 &7275503495766094600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -398,7 +398,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2271502847731017999, guid: 617b05264833ffb4786917d52fb1d662, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.06
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -2271502847731017999, guid: 617b05264833ffb4786917d52fb1d662, type: 3}
       propertyPath: m_LocalPosition.y
@@ -410,7 +410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2271502847731017999, guid: 617b05264833ffb4786917d52fb1d662, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071067
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -2271502847731017999, guid: 617b05264833ffb4786917d52fb1d662, type: 3}
       propertyPath: m_LocalRotation.x
@@ -422,11 +422,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2271502847731017999, guid: 617b05264833ffb4786917d52fb1d662, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -2271502847731017999, guid: 617b05264833ffb4786917d52fb1d662, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -2271502847731017999, guid: 617b05264833ffb4786917d52fb1d662, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -446,7 +446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5233112405309087440, guid: 617b05264833ffb4786917d52fb1d662, type: 3}
       propertyPath: m_TagString
-      value: Blade
+      value: BossBlade
       objectReference: {fileID: 0}
     - target: {fileID: 8513859187771203891, guid: 617b05264833ffb4786917d52fb1d662, type: 3}
       propertyPath: m_Name
@@ -464,7 +464,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5233112405309087440, guid: 617b05264833ffb4786917d52fb1d662, type: 3}
   m_PrefabInstance: {fileID: 658279919926208909}
   m_PrefabAsset: {fileID: 0}
---- !u!135 &6002656515589317203
+--- !u!135 &501006592071138826
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -472,12 +472,12 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4737063435942639453}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
+  m_IsTrigger: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Radius: 0.03415285
-  m_Center: {x: 0.12415285, y: 0, z: 0}
---- !u!135 &6019288776281766028
+  m_Radius: 0.035
+  m_Center: {x: 0.122, y: 0, z: 0}
+--- !u!135 &5538912237134709045
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -485,8 +485,8 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4737063435942639453}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
+  m_IsTrigger: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Radius: 0.033728257
-  m_Center: {x: -0.12872812, y: 0, z: 0}
+  m_Radius: 0.035
+  m_Center: {x: -0.126, y: 0, z: 0}

@@ -21,7 +21,16 @@ public class SceneHandler : MonoBehaviour
 	public TextMeshProUGUI enemyCount;
 	public int enemiesInt;
 
-	private void Update()
+	//GameObject music;
+	//MusicScript musicScript;
+
+  //  private void Start()
+  //  {
+		//music = GameObject.FindGameObjectWithTag("Music");
+		//musicScript = music.GetComponent<MusicScript>();
+  //  }
+
+    private void Update()
 	{
 		//if (Input.GetKeyDown(KeyCode.Space))
 		//{
@@ -115,7 +124,9 @@ public class SceneHandler : MonoBehaviour
 	public void MenuScene()
 	{
 		Time.timeScale = 1;
+		//musicScript.ProgressMusic(4.5f);
 		StartCoroutine(LoadLevel(0));
+		//SceneManager.LoadScene("Menu");
 	}
 
 	public void QuitGame()

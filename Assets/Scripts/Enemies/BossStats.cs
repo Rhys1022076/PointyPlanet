@@ -98,12 +98,4 @@ public class BossStats : MonoBehaviour
     {
         health = Mathf.Clamp(health, 0, maxHealth);
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Bullet")
-        {
-            TakeDamage(1);
-        }
-    }
 }
