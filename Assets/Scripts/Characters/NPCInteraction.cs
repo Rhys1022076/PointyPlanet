@@ -53,7 +53,4 @@ public class NPCInteraction : MonoBehaviour
             triggering = false;
         }
     }
-
-
-    
 }
