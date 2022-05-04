@@ -17,6 +17,8 @@ public class Prickidna : MonoBehaviour
 	private void OnTriggerEnter(Collider other)
 	{
 		// if the gameobject which enters the trigger has the 'bullet' tag
+		// to add the crusher and slicer tags to this statement, swap the comment below
+		//if (other.CompareTag("Bullet") || other.CompareTag("Blade") || other.CompareTag("Crusher"))
 		if (other.CompareTag("Bullet"))
 		{
 			//destroy the bullet
