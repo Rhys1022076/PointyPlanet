@@ -35594,7 +35594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3623856017480924696, guid: 31ba85ae864805544b2dd564c0317e92, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 38.1
+      value: 37.6
       objectReference: {fileID: 0}
     - target: {fileID: 3623856017480924696, guid: 31ba85ae864805544b2dd564c0317e92, type: 3}
       propertyPath: m_LocalPosition.y
@@ -35602,7 +35602,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3623856017480924696, guid: 31ba85ae864805544b2dd564c0317e92, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 140.3
+      value: 132.8
       objectReference: {fileID: 0}
     - target: {fileID: 3623856017480924696, guid: 31ba85ae864805544b2dd564c0317e92, type: 3}
       propertyPath: m_LocalRotation.w
@@ -47767,41 +47767,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3462688794109722392, guid: 8cd78a41294b2ad41ab83dfd9cd51552, type: 3}
-      propertyPath: triggerEnterEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3462688794109722392, guid: 8cd78a41294b2ad41ab83dfd9cd51552, type: 3}
-      propertyPath: triggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3462688794109722392, guid: 8cd78a41294b2ad41ab83dfd9cd51552, type: 3}
-      propertyPath: triggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 182509061}
-    - target: {fileID: 3462688794109722392, guid: 8cd78a41294b2ad41ab83dfd9cd51552, type: 3}
-      propertyPath: triggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3462688794109722392, guid: 8cd78a41294b2ad41ab83dfd9cd51552, type: 3}
-      propertyPath: triggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 3462688794109722392, guid: 8cd78a41294b2ad41ab83dfd9cd51552, type: 3}
-      propertyPath: triggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3462688794109722392, guid: 8cd78a41294b2ad41ab83dfd9cd51552, type: 3}
-      propertyPath: triggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+    - target: {fileID: 501006592071138826, guid: 8cd78a41294b2ad41ab83dfd9cd51552, type: 3}
+      propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3462688794109722392, guid: 8cd78a41294b2ad41ab83dfd9cd51552, type: 3}
-      propertyPath: triggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3827060272563016731, guid: 8cd78a41294b2ad41ab83dfd9cd51552, type: 3}
-      propertyPath: health
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4448019808569600328, guid: 8cd78a41294b2ad41ab83dfd9cd51552, type: 3}
       propertyPath: m_RootOrder
@@ -47851,6 +47819,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 5538912237134709045, guid: 8cd78a41294b2ad41ab83dfd9cd51552, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7195333329584673141, guid: 8cd78a41294b2ad41ab83dfd9cd51552, type: 3}
       propertyPath: player
       value: 
@@ -47859,10 +47831,6 @@ PrefabInstance:
       propertyPath: explode
       value: 
       objectReference: {fileID: 2312591318274358132, guid: 77da29788f3010e4396994ea52057980, type: 3}
-    - target: {fileID: 7446847575039695432, guid: 8cd78a41294b2ad41ab83dfd9cd51552, type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cd78a41294b2ad41ab83dfd9cd51552, type: 3}
 --- !u!1001 &2141995020

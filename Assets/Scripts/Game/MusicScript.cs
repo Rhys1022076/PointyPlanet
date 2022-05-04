@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MusicScript : MonoBehaviour
 {
+    private static MusicScript current;
     private static FMOD.Studio.EventInstance Music;
 
     Scene scene;
@@ -12,10 +13,19 @@ public class MusicScript : MonoBehaviour
     private GameObject boss;
     Boss bossScript;
 
+    private void Awake()
+    {
+        if (current != null && current != this) Destroy(gameObject);
+        else
+        {
+            current = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
     void Start()
     {
-        DontDestroyOnLoad(gameObject);
-
+       
         Music = FMODUnity.RuntimeManager.CreateInstance("event:/Soundtrack/Soundtrack");
         //Music.setParameterByName("Location", 4.5f);
         Music.start();
@@ -30,6 +40,7 @@ public class MusicScript : MonoBehaviour
     void Update()
     {
         scene = SceneManager.GetActiveScene();
+        print(scene.name);
 
         if (scene.name == "Menu")
 		{
