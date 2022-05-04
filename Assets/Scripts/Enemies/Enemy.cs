@@ -8,18 +8,14 @@ public class Enemy : MonoBehaviour
     private ParticleSystem explode;
 
     private Animator anim;
-
-    Patrol patrol;
-    BulletTime bulletTime;
+    private Transform player;
 
     private bool playerInRange = false;
-    private Transform player;
+
     public float turnSpeed = 10f;
 
     void Start()
     {
-        patrol = GetComponent<Patrol>();
-        bulletTime = GetComponent<BulletTime>();
         player = GameObject.FindWithTag("Player").transform;
         anim = GetComponent<Animator>();
         Invoke(nameof(StartAttack), Random.Range(0, 1f));
