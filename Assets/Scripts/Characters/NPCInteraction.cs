@@ -10,10 +10,10 @@ public class NPCInteraction : MonoBehaviour
     public GameObject talkPrompt;
     public GameObject trigNPC;
 
-    /*
+    
     private void FixedUpdate()
     {
-        if (triggering)
+        if (triggering && GameManager.Instance.inDialogue == false)
         {
             talkPrompt.SetActive(true);
         }
@@ -22,8 +22,6 @@ public class NPCInteraction : MonoBehaviour
             talkPrompt.SetActive(false);
         }
     }
-    */
-    
     
     private void OnTriggerEnter(Collider other)
     {
@@ -36,25 +34,25 @@ public class NPCInteraction : MonoBehaviour
    
 
     private void OnTriggerStay(Collider other)
-        {
+    {
 
-            if (GameManager.Instance.inDialogue == true) return;
+        if (GameManager.Instance.inDialogue == true) return;
            
 
-            if (other.tag == "Player" && Input.GetMouseButtonDown(1))
-            {
-                DialogueFlowChart.SetActive(true);
-            }
+        if (other.tag == "Player" && Input.GetMouseButtonDown(1))
+        {
+            DialogueFlowChart.SetActive(true);
         }
+    }
 
     private void OnTriggerExit(Collider other)
+    {
+        Debug.Log("Exit Trigger");
+        if (other.tag == "Player")
         {
-            Debug.Log("Exit Trigger");
-            if (other.tag == "Player")
-            {
-                triggering = false;
-            }
+            triggering = false;
         }
+    }
 
 
     

@@ -38,18 +38,21 @@ public class PlayerStats : MonoBehaviour
     SceneHandler sceneHandler;
 
     private bool iFrames = false;
+    private bool dead = false;
 
 	private void Start()
 	{
         anim = GetComponent<Animator>();
         sceneHandler = FindObjectOfType<SceneHandler>();
+        dead = false;
 	}
 
 	private void Update()
 	{
-		if(health <= 0)
+		if(health <= 0 && !dead)
 		{
             Death();
+            dead = true;
 		}
 	}
 
@@ -64,6 +67,7 @@ public class PlayerStats : MonoBehaviour
         if (!iFrames)
         {
             Debug.Log("taking damage");
+
             if (health != 1)
             {
                 anim.SetTrigger("Hurt");
@@ -97,6 +101,7 @@ public class PlayerStats : MonoBehaviour
 
     public void Death()
 	{
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Player/Death", gameObject.GetComponent<Transform>().position);
         StartCoroutine(DeathSequence());
 	}
 

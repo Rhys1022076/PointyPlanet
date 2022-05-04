@@ -17,6 +17,8 @@ public class Boss : MonoBehaviour
 
     public float turnSpeed = 10f;
 
+    public bool bossMusic = false;
+
 
     void Start()
     {
@@ -46,6 +48,14 @@ public class Boss : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            bossMusic = true;
+        }
+    }
+
     public void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Player")
@@ -64,7 +74,9 @@ public class Boss : MonoBehaviour
 
     private void OnDestroy()
     {
+        bossMusic = false;
         var clone = Instantiate(explode, transform.position, transform.rotation);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Enemies/ExplosionBoss", clone.transform.position);
         Destroy(clone.gameObject, 2f);
     }
 }

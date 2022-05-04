@@ -14600,7 +14600,7 @@ MonoBehaviour:
   - {fileID: 2509385648449817279}
   - {fileID: 2509385648660773502}
   generator: {fileID: 5985243009109691797}
-  explode: {fileID: 8714244275622671898, guid: abf8d5b763621654486813c5c8af8234, type: 3}
+  explode: {fileID: 5599013862955277228, guid: 9069b64de27e3a947b5a154689e0c214, type: 3}
 --- !u!65 &5985243009524693395
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class SceneHandler : MonoBehaviour
 {
@@ -12,11 +13,24 @@ public class SceneHandler : MonoBehaviour
 	public GameObject forestTrigger;
 
 	public GameObject pauseMenu;
-	
+
 	public GameObject[] enemies;
 	public GameObject[] rabbits;
+	public GameObject[] boss;
 
-	private void Update()
+	public TextMeshProUGUI enemyCount;
+	public int enemiesInt;
+
+	//GameObject music;
+	//MusicScript musicScript;
+
+  //  private void Start()
+  //  {
+		//music = GameObject.FindGameObjectWithTag("Music");
+		//musicScript = music.GetComponent<MusicScript>();
+  //  }
+
+    private void Update()
 	{
 		//if (Input.GetKeyDown(KeyCode.Space))
 		//{
@@ -32,22 +46,39 @@ public class SceneHandler : MonoBehaviour
 			Time.timeScale = 0;
 		}
 
-		//if (Input.GetKeyDown(KeyCode.Backspace))
-		//{
-		//	MenuScene();
-		//}
+		if (Input.GetKeyDown(KeyCode.Backspace))
+		{
+			StartCoroutine(LoadLevel(4));
+		}
 
-		if(SceneManager.GetActiveScene().name == "PricklyPlains" || SceneManager.GetActiveScene().name == "PinForest")
+		if(SceneManager.GetActiveScene().name == "PricklyPlains")
 		{
 			enemies = GameObject.FindGameObjectsWithTag("Enemy");
 			rabbits = GameObject.FindGameObjectsWithTag("Rabbit");
+
 			if (enemies.Length == 0 && rabbits.Length == 0)
 			{
 				levelClear = true;
 				NextScene();
-				//Debug.Log("You killed all enemies");
+				Debug.Log("You killed all enemies");
 			}
-		}	
+		}
+
+		if (SceneManager.GetActiveScene().name == "PinForest")
+		{
+			enemies = GameObject.FindGameObjectsWithTag("Enemy");
+			rabbits = GameObject.FindGameObjectsWithTag("Rabbit");
+			boss = GameObject.FindGameObjectsWithTag("Boss");
+			if (enemies.Length == 0 && rabbits.Length == 0 || boss.Length == 0)
+			{
+				levelClear = true;
+				NextScene();
+				Debug.Log("You killed all enemies");
+			}
+		}
+
+		enemiesInt = enemies.Length + rabbits.Length;
+		enemyCount.text = enemiesInt.ToString();
 	}
 
 	public void NextScene()
@@ -55,18 +86,8 @@ public class SceneHandler : MonoBehaviour
         //StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
         if (levelClear)
         {
-			if (SceneManager.GetActiveScene().name == "PricklyPlains")
-            {
-				// load second thorntown scene
-				LoadLevel(3);
-            }
-			
-			if (SceneManager.GetActiveScene().name == "PinForest")
-			{
-				// load thorntown finale scene
-				//LoadLevel(x);
-			}
-
+			// if the level is completed, wait some time before transitioning
+			StartCoroutine(TransitionPause());
 		}
 
 		if (SceneManager.GetActiveScene().name == "Menu")
@@ -103,7 +124,9 @@ public class SceneHandler : MonoBehaviour
 	public void MenuScene()
 	{
 		Time.timeScale = 1;
+		//musicScript.ProgressMusic(4.5f);
 		StartCoroutine(LoadLevel(0));
+		//SceneManager.LoadScene("Menu");
 	}
 
 	public void QuitGame()
@@ -121,5 +144,23 @@ public class SceneHandler : MonoBehaviour
 
 		//load scene
 		SceneManager.LoadScene(levelIndex);
+	}
+
+	IEnumerator TransitionPause()
+	{
+		yield return new WaitForSeconds(2f);
+		
+		if (SceneManager.GetActiveScene().name == "PricklyPlains")
+		{
+			// load second thorntown scene
+			StartCoroutine(LoadLevel(3));
+		}
+
+		if (SceneManager.GetActiveScene().name == "PinForest")
+		{
+			// load thorntown finale scene
+			//StartCoroutine(LoadLevel(x));
+			Debug.Log("you win!");
+		}
 	}
 }

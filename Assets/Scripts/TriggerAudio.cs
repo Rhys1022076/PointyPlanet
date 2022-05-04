@@ -20,7 +20,7 @@ public class TriggerAudio : MonoBehaviour
 
 	public void PlaySound(string path)
 	{
-        FMODUnity.RuntimeManager.PlayOneShot(path, GetComponent<Transform>().position);
+        FMODUnity.RuntimeManager.PlayOneShot(path, gameObject.GetComponent<Transform>().position);
 	}
 
 	public void PlayOneShot()
