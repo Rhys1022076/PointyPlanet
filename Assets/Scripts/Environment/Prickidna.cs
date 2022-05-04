@@ -4,25 +4,39 @@ using UnityEngine;
 
 public class Prickidna : MonoBehaviour
 {
-    [SerializeField]
-    public GameObject wildlife;
+	// reference to animator component
+	private Animator anim;
 
-    Patrol patrol;
+	private void Start()
+	{
+		// get animator component on child gameobject (in this case the model)
+		// necessary to animate children of the model
+		anim = GetComponentInChildren<Animator>();
+	}
 
-    public float turnSpeed = 10f;
+	private void OnTriggerEnter(Collider other)
+	{
+		// if the gameobject which enters the trigger has the 'bullet' tag
+		if (other.CompareTag("Bullet"))
+		{
+			//destroy the bullet
+			Destroy(other.gameObject);
 
-    void Start()
-    {
-        patrol = GetComponent<Patrol>();
-    }
+			// start death functionality
+			StartCoroutine(Death());
+		}
+	}
 
+	// death functionality
+	IEnumerator Death()
+	{
+		// trigger animation
+		anim.SetTrigger("Death");
 
-    /*
-    public void Crossfire()
-    {
-        Debug.Log("Nooo!");
-            Destroy(gameObject);
-   
-    }
-    */
+		// wait for 1 second to allow the animation to play
+		yield return new WaitForSeconds(1f);
+
+		// destroy prickidna object
+		Destroy(gameObject);
+	}
 }
