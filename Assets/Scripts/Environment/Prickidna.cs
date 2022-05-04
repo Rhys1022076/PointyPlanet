@@ -5,14 +5,24 @@ using UnityEngine;
 public class Prickidna : MonoBehaviour
 {
     [SerializeField]
-    private GameObject model;
+    public GameObject wildlife;
 
     Patrol patrol;
 
     public float turnSpeed = 10f;
-    
+
     void Start()
     {
         patrol = GetComponent<Patrol>();
     }
+
+
+    /*
+    public void Crossfire()
+    {
+        Debug.Log("Nooo!");
+            Destroy(gameObject);
+   
+    }
+    */
 }

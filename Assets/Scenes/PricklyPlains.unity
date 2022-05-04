@@ -6194,19 +6194,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 45f7b489b6e39cf4ea89440c258a4abb, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.54167527
+      value: -0.45451945
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 45f7b489b6e39cf4ea89440c258a4abb, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.54167527
+      value: 0.45451945
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 45f7b489b6e39cf4ea89440c258a4abb, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.45451945
+      value: 0.54167527
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 45f7b489b6e39cf4ea89440c258a4abb, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.45451945
+      value: 0.54167527
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 45f7b489b6e39cf4ea89440c258a4abb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6214,7 +6214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 45f7b489b6e39cf4ea89440c258a4abb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 80
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 45f7b489b6e39cf4ea89440c258a4abb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -6685,7 +6685,6 @@ GameObject:
   - component: {fileID: 1400785021}
   - component: {fileID: 1400785020}
   - component: {fileID: 1400785019}
-  - component: {fileID: 1400785050}
   - component: {fileID: 1400785052}
   - component: {fileID: 1400785072}
   - component: {fileID: 1400785071}
@@ -7108,7 +7107,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1668.2245
     y: 70.387695
-    width: 111.53845
+    width: 113
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7119,7 +7118,6 @@ MonoBehaviour:
   commandList:
   - {fileID: 1400785031}
   - {fileID: 1400785051}
-  - {fileID: 1400785050}
   - {fileID: 1400785072}
   - {fileID: 1400785030}
   - {fileID: 1400785070}
@@ -7157,11 +7155,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -989.8912, y: 198.03513}
+  scrollPos: {x: -1113.9937, y: 211.6123}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.9100001
+  zoom: 1
   scrollViewRect:
     serializedVersion: 2
     x: 0
@@ -7171,7 +7169,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1400785033}
   selectedCommands:
-  - {fileID: 1400785050}
+  - {fileID: 1400785072}
   variables: []
   description: Prickly Plains Flowchart
   stepPause: 0
@@ -7406,7 +7404,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1666.8911
     y: 315.8877
-    width: 118.13186
+    width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7522,7 +7520,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1811.8911
     y: 197.8877
-    width: 100.549446
+    width: 103
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7554,7 +7552,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1518.8911
     y: 190.8877
-    width: 104.94505
+    width: 107
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7595,24 +7593,6 @@ MonoBehaviour:
   hideThisOption:
     booleanRef: {fileID: 0}
     booleanVal: 0
---- !u!114 &1400785050
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1400785017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 34
-  indentLevel: 0
-  _duration:
-    floatRef: {fileID: 0}
-    floatVal: 2
-  durationOLD: 0
 --- !u!114 &1400785051
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -9405,14 +9385,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1684111328}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0.65846485, z: -0, w: 0.75261146}
   m_LocalPosition: {x: 117.62, y: 2.13, z: -2.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1287746221}
   m_Father: {fileID: 0}
   m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -82.366, z: 0}
 --- !u!95 &1684111335
 Animator:
   serializedVersion: 3
