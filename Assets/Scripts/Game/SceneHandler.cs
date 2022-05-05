@@ -159,7 +159,7 @@ public class SceneHandler : MonoBehaviour
 		if (SceneManager.GetActiveScene().name == "PinForest")
 		{
 			// load thorntown finale scene
-			//StartCoroutine(LoadLevel(x));
+			StartCoroutine(LoadLevel(5));
 			Debug.Log("you win!");
 		}
 	}
